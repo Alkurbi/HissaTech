@@ -18,7 +18,6 @@ def normalized(text: str) -> str:
 
 
 def check_content(text: str) -> None:
-    # ponytail: conservative text heuristics, not semantic proof. Authority stays code-owned.
     value = normalized(text)
     if re.search(r"hr\s*0?1|salary|monthly_salary|راتب|رواتب", value):
         raise RestrictedAccess("Access denied under P03. Restricted salary data is excluded.")

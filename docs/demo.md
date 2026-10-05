@@ -43,8 +43,8 @@ Submission run: [saved report](../artifacts/assessment-audit-20261005-offline/re
 Tech screenshots capture the saved real-model output pages. They show generated
 evidence, not a live dashboard interaction or a prerecorded model response.
 
-Final deterministic verification: 69 tests passed; mypy reported no issues in
-13 application/packaging files. Standards and specification reviews have no remaining blocking
+Final deterministic verification: 68 tests passed; mypy reported no issues in
+12 application files. Standards and specification reviews have no remaining blocking
 findings in the earlier review. New submission checks are documented in the
 acceptance index. Narrative citation completeness remains a disclosed limitation.
 

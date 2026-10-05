@@ -1,5 +1,8 @@
 # Architecture
 
+Presentation diagrams: [system architecture](architecture.svg) and
+[approval and verified execution](approval-flow.svg).
+
 One process, Python standard library, local Ollama, and SQLite. No orchestration
 framework is needed for four bounded workflows and a small fixture set.
 

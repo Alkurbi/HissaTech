@@ -97,7 +97,6 @@ def support(request_id: str, text: str, model: Model, store: Store, sources: Sou
 
 def support_priority(text: str) -> tuple[str, str, str]:
     value = normalized(text)
-    # ponytail: conservative bilingual phrase rules. Extend from observed messages, not model-selected urgency.
     payment = bool(re.search(r"payment|paid|دفع|دفعت|سداد", value))
     success = bool(re.search(r"success(?:ful|fully)?|succeeded|\bpaid\b|بنجاح|نجح", value)) and not bool(re.search(r"(?:not|never|haven't|hasn't|didn't).{0,25}(?:paid|success|succeed)|unsuccessful|failed|declined|فشل|لم ينجح|لم.{0,10}(?:أدفع|ادفع|الدفع|دفع)", value))
     missing = bool(re.search(r"confirmation.{0,15}(?:missing|absent|not (?:visible|received|shown|available))|(?:cannot|can't).{0,15}(?:see|find).{0,15}confirmation|(?:no|missing) confirmation|(?:not|never).{0,10}received.{0,10}confirmation|(?:لم|لا).{0,25}(?:تأكيد|التأكيد)|(?:تأكيد|التأكيد).{0,25}(?:مفقود|لم يظهر|غير موجود)", value))
@@ -128,7 +127,6 @@ def product(request_id: str, model: Model, sources: Sources) -> Response:
         check_content(item["text"])
     themes: list[dict[str, Any]] = []
     assigned: set[str] = set()
-    # ponytail: known bilingual themes, explicitly retain novel feedback for review instead of inventing a category.
     for name, terms, problem, criteria, priority, rationale in definitions:
         evidence = [item for item in feedback if item["id"] not in assigned and any(term in normalized(item["text"]) for term in terms)]
         evidence_ids = [item["id"] for item in evidence]

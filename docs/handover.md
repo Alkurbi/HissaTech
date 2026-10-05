@@ -31,8 +31,8 @@ planning assumptions, not verified consumption or tariff. Engineering cost is
 and model-download costs are excluded; actual total monetary cost remains unknown.
 
 Evidence: [acceptance index](acceptance.md) and [demo/screenshots](demo.md).
-All 69 deterministic tests pass; cached offline type checks pass for 13
-application/packaging files. The index
+All 68 deterministic tests pass; cached offline type checks pass for 12
+application files. The index
 distinguishes real inference from controlled faults. Approvals and exact executed
 payloads survive database reopen. Earlier reviews had no blocking findings;
 current submission changes have separate automated checks.

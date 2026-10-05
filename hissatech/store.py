@@ -75,7 +75,6 @@ class Store:
 
     @contextmanager
     def transaction(self) -> Iterator[None]:
-        # ponytail: serialize local mock writes. Real integrations need adapter-side execution-key reconciliation.
         self.db.execute("BEGIN IMMEDIATE")
         try:
             yield
