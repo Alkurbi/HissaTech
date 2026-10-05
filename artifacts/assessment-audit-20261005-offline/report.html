@@ -1,0 +1,1855 @@
+<!doctype html><meta charset='utf-8'><title>HissaTech real local demo</title><h1>HissaTech real local demo</h1><p>operator-attested disconnected; not independently verified. Mock actions only.</p><table><tr><th>Case</th><th>Role</th><th>Status</th><th>Seconds</th></tr><tr><td>0</td><td>marketing</td><td>complete</td><td>3.235</td></tr><tr><td>1</td><td>customer_service</td><td>pending_approval</td><td>1.1588</td></tr><tr><td>2</td><td>customer_service</td><td>pending_approval</td><td>1.1525</td></tr><tr><td>3</td><td>customer_service</td><td>needs_information</td><td>0.4127</td></tr><tr><td>4</td><td>customer_service</td><td>blocked</td><td>0.3962</td></tr><tr><td>5</td><td>product</td><td>draft</td><td>2.9923</td></tr><tr><td>6</td><td>tech</td><td>pending_approval</td><td>2.8599</td></tr><tr><td>7</td><td>marketing</td><td>denied</td><td>0.0106</td></tr><tr><td>8</td><td>marketing</td><td>blocked</td><td>0.0091</td></tr><tr><td>9</td><td>tech</td><td>denied</td><td>0.0069</td></tr><tr><td>10</td><td>marketing</td><td>complete</td><td>3.2329</td></tr><tr><td>11</td><td>marketing</td><td>needs_clarification</td><td>0.6087</td></tr></table><h2>Saved outputs</h2><pre>{
+  &quot;created_at&quot;: &quot;2026-10-05T18:50:19.035283+00:00&quot;,
+  &quot;python&quot;: &quot;3.13.5&quot;,
+  &quot;platform&quot;: &quot;Windows-11-10.0.26200-SP0&quot;,
+  &quot;model_metadata&quot;: {
+    &quot;model&quot;: &quot;mistral-nemo:latest&quot;,
+    &quot;details&quot;: {
+      &quot;parent_model&quot;: &quot;&quot;,
+      &quot;format&quot;: &quot;gguf&quot;,
+      &quot;family&quot;: &quot;llama&quot;,
+      &quot;families&quot;: [
+        &quot;llama&quot;
+      ],
+      &quot;parameter_size&quot;: &quot;12.2B&quot;,
+      &quot;quantization_level&quot;: &quot;Q4_0&quot;
+    },
+    &quot;model_info&quot;: {
+      &quot;general.architecture&quot;: &quot;llama&quot;,
+      &quot;general.basename&quot;: &quot;Mistral-Nemo&quot;,
+      &quot;general.file_type&quot;: 2,
+      &quot;general.finetune&quot;: &quot;Instruct&quot;,
+      &quot;general.languages&quot;: null,
+      &quot;general.license&quot;: &quot;apache-2.0&quot;,
+      &quot;general.parameter_count&quot;: 12247782400,
+      &quot;general.quantization_version&quot;: 2,
+      &quot;general.size_label&quot;: &quot;12B&quot;,
+      &quot;general.type&quot;: &quot;model&quot;,
+      &quot;general.version&quot;: &quot;2407&quot;,
+      &quot;llama.attention.head_count&quot;: 32,
+      &quot;llama.attention.head_count_kv&quot;: 8,
+      &quot;llama.attention.key_length&quot;: 128,
+      &quot;llama.attention.layer_norm_rms_epsilon&quot;: 1e-05,
+      &quot;llama.attention.value_length&quot;: 128,
+      &quot;llama.block_count&quot;: 40,
+      &quot;llama.context_length&quot;: 1024000,
+      &quot;llama.embedding_length&quot;: 5120,
+      &quot;llama.feed_forward_length&quot;: 14336,
+      &quot;llama.rope.dimension_count&quot;: 128,
+      &quot;llama.rope.freq_base&quot;: 1000000,
+      &quot;llama.vocab_size&quot;: 131072,
+      &quot;tokenizer.ggml.add_bos_token&quot;: true,
+      &quot;tokenizer.ggml.add_eos_token&quot;: false,
+      &quot;tokenizer.ggml.add_space_prefix&quot;: false,
+      &quot;tokenizer.ggml.bos_token_id&quot;: 1,
+      &quot;tokenizer.ggml.eos_token_id&quot;: 2,
+      &quot;tokenizer.ggml.merges&quot;: null,
+      &quot;tokenizer.ggml.model&quot;: &quot;gpt2&quot;,
+      &quot;tokenizer.ggml.pre&quot;: &quot;tekken&quot;,
+      &quot;tokenizer.ggml.token_type&quot;: null,
+      &quot;tokenizer.ggml.tokens&quot;: null,
+      &quot;tokenizer.ggml.unknown_token_id&quot;: 0
+    },
+    &quot;license_name&quot;: &quot;                                 Apache License&quot;
+  },
+  &quot;offline_verification&quot;: &quot;operator-attested disconnected; not independently verified&quot;,
+  &quot;scope&quot;: &quot;Real local inference, fictional fixtures, local mock actions only. Narrative quality needs human review.&quot;,
+  &quot;routing_checks&quot;: [
+    {
+      &quot;request&quot;: &quot;how many leads&quot;,
+      &quot;expected_department&quot;: &quot;marketing&quot;,
+      &quot;interpretation&quot;: {
+        &quot;department&quot;: &quot;marketing&quot;,
+        &quot;clarification&quot;: null
+      },
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;request&quot;: &quot;how many duplicates leads&quot;,
+      &quot;expected_department&quot;: &quot;marketing&quot;,
+      &quot;interpretation&quot;: {
+        &quot;department&quot;: &quot;marketing&quot;,
+        &quot;clarification&quot;: null
+      },
+      &quot;passed&quot;: true
+    },
+    {
+      &quot;request&quot;: &quot;Can you deal with this problem?&quot;,
+      &quot;expected_department&quot;: null,
+      &quot;interpretation&quot;: {
+        &quot;department&quot;: null,
+        &quot;clarification&quot;: &quot;Could you please specify the nature of the problem?&quot;
+      },
+      &quot;passed&quot;: true
+    }
+  ],
+  &quot;cases&quot;: [
+    {
+      &quot;role&quot;: &quot;marketing&quot;,
+      &quot;request&quot;: &quot;summarize Prime lead performance&quot;,
+      &quot;total_seconds&quot;: 3.235,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.3797
+        },
+        {
+          &quot;task&quot;: &quot;DRAFT&quot;,
+          &quot;seconds&quot;: 2.8311
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-0&quot;,
+        &quot;department&quot;: &quot;marketing&quot;,
+        &quot;result&quot;: {
+          &quot;unique_leads&quot;: 7,
+          &quot;qualified_leads&quot;: 3,
+          &quot;duplicates&quot;: [
+            &quot;L04&quot;
+          ],
+          &quot;duplicate_conflicts&quot;: [],
+          &quot;duplicate_resolution&quot;: &quot;Retain the first import per contact ID. Metrics are provisional when duplicate conflicts exist.&quot;,
+          &quot;status_counts&quot;: {
+            &quot;Qualified&quot;: 3,
+            &quot;New&quot;: 2,
+            &quot;Unqualified&quot;: 1,
+            &quot;Contacted&quot;: 1
+          },
+          &quot;missing_budget_count&quot;: 2,
+          &quot;missing_source_count&quot;: 1,
+          &quot;by_source&quot;: {
+            &quot;Paid Search&quot;: {
+              &quot;unique_leads&quot;: 2,
+              &quot;qualified_leads&quot;: 1,
+              &quot;status_counts&quot;: {
+                &quot;Qualified&quot;: 1,
+                &quot;Unqualified&quot;: 1
+              },
+              &quot;spend_sar&quot;: 1200,
+              &quot;qualification_rate&quot;: 0.5,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: 600.0
+            },
+            &quot;Social&quot;: {
+              &quot;unique_leads&quot;: 2,
+              &quot;qualified_leads&quot;: 0,
+              &quot;status_counts&quot;: {
+                &quot;New&quot;: 1,
+                &quot;Contacted&quot;: 1
+              },
+              &quot;spend_sar&quot;: 800,
+              &quot;qualification_rate&quot;: 0.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: 400.0
+            },
+            &quot;Referral&quot;: {
+              &quot;unique_leads&quot;: 1,
+              &quot;qualified_leads&quot;: 1,
+              &quot;status_counts&quot;: {
+                &quot;Qualified&quot;: 1
+              },
+              &quot;spend_sar&quot;: null,
+              &quot;qualification_rate&quot;: 1.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: null
+            },
+            &quot;Organic&quot;: {
+              &quot;unique_leads&quot;: 1,
+              &quot;qualified_leads&quot;: 1,
+              &quot;status_counts&quot;: {
+                &quot;Qualified&quot;: 1
+              },
+              &quot;spend_sar&quot;: null,
+              &quot;qualification_rate&quot;: 1.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: null
+            },
+            &quot;Unknown&quot;: {
+              &quot;unique_leads&quot;: 1,
+              &quot;qualified_leads&quot;: 0,
+              &quot;status_counts&quot;: {
+                &quot;New&quot;: 1
+              },
+              &quot;spend_sar&quot;: null,
+              &quot;qualification_rate&quot;: 0.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: null
+            }
+          },
+          &quot;qualification_rate&quot;: 0.42857142857142855,
+          &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads, deduplicated by contact ID&quot;,
+          &quot;management_summary&quot;: &quot;Here&#x27;s a summary of lead metrics:\n\n- Total unique leads: 7\n- Qualified leads: 3 (42.86% qualification rate)\n- Duplicate leads: L04\n\nBy source:\n\n- Paid Search: 2 unique leads, 1 qualified (50% qualification rate), SAR 1200 spend, SAR 600 cost per unique lead\n- Social: 2 unique leads, 0 qualified (0% qualification rate), SAR 800 spend, SAR 400 cost per unique lead\n- Referral &amp; Organic: Both had 1 unique and qualified lead each, with unknown spend\n- Unknown source: 1 unique lead, 0 qualified\n\nUnknowns: Spend for Referral, Organic, and Unknown sources; budgets for 2 leads.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;P01&quot;,
+            &quot;L01&quot;
+          ],
+          &quot;recommendations&quot;: [
+            &quot;Review Qualified leads for follow-up through approved channels; this analysis contacts nobody.&quot;,
+            &quot;Complete unknown source, budget, and spend data before reallocating spend.&quot;
+          ],
+          &quot;recommendation_source_ids&quot;: [
+            [
+              &quot;P03&quot;,
+              &quot;L01&quot;,
+              &quot;L02&quot;,
+              &quot;L03&quot;,
+              &quot;L04&quot;,
+              &quot;L05&quot;,
+              &quot;L06&quot;,
+              &quot;L07&quot;,
+              &quot;L08&quot;
+            ],
+            [
+              &quot;P01&quot;,
+              &quot;L01&quot;,
+              &quot;L02&quot;,
+              &quot;L03&quot;,
+              &quot;L04&quot;,
+              &quot;L05&quot;,
+              &quot;L06&quot;,
+              &quot;L07&quot;,
+              &quot;L08&quot;
+            ]
+          ]
+        },
+        &quot;sources&quot;: [
+          &quot;P01&quot;,
+          &quot;P02&quot;,
+          &quot;P03&quot;,
+          &quot;L01&quot;,
+          &quot;L02&quot;,
+          &quot;L03&quot;,
+          &quot;L04&quot;,
+          &quot;L05&quot;,
+          &quot;L06&quot;,
+          &quot;L07&quot;,
+          &quot;L08&quot;
+        ],
+        &quot;missing_information&quot;: [
+          &quot;No sale or investment conversion data is available.&quot;,
+          &quot;Referral spend is unknown, not zero.&quot;,
+          &quot;Organic spend is unknown, not zero.&quot;,
+          &quot;Unknown spend is unknown, not zero.&quot;,
+          &quot;1 unique lead(s) have an unknown source.&quot;,
+          &quot;2 unique lead(s) have unknown budgets.&quot;
+        ],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;complete&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;customer_service&quot;,
+      &quot;request&quot;: &quot;draft a ticket for S01&quot;,
+      &quot;total_seconds&quot;: 1.1588,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.4385
+        },
+        {
+          &quot;task&quot;: &quot;DRAFT&quot;,
+          &quot;seconds&quot;: 0.7106
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-1&quot;,
+        &quot;department&quot;: &quot;customer_service&quot;,
+        &quot;result&quot;: {
+          &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+          &quot;priority&quot;: &quot;High&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+          &quot;draft_response&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S01&quot;
+          ]
+        },
+        &quot;sources&quot;: [
+          &quot;S01&quot;,
+          &quot;P02&quot;
+        ],
+        &quot;missing_information&quot;: [],
+        &quot;proposed_action&quot;: {
+          &quot;proposal_id&quot;: &quot;4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;payload&quot;: {
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ]
+          }
+        },
+        &quot;action_status&quot;: &quot;pending_approval&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;customer_service&quot;,
+      &quot;request&quot;: &quot;answer S02 in Arabic&quot;,
+      &quot;total_seconds&quot;: 1.1525,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.3836
+        },
+        {
+          &quot;task&quot;: &quot;DRAFT&quot;,
+          &quot;seconds&quot;: 0.7496
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-2&quot;,
+        &quot;department&quot;: &quot;customer_service&quot;,
+        &quot;result&quot;: {
+          &quot;classification&quot;: &quot;access request&quot;,
+          &quot;priority&quot;: &quot;Normal&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: ordinary account-access requests are Normal priority.&quot;,
+          &quot;draft_response&quot;: &quot;شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S02&quot;,
+            &quot;P02&quot;
+          ]
+        },
+        &quot;sources&quot;: [
+          &quot;S02&quot;,
+          &quot;P02&quot;
+        ],
+        &quot;missing_information&quot;: [],
+        &quot;proposed_action&quot;: {
+          &quot;proposal_id&quot;: &quot;14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+          &quot;payload_hash&quot;: &quot;2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42&quot;,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;payload&quot;: {
+            &quot;message_id&quot;: &quot;S02&quot;,
+            &quot;message_text&quot;: &quot;لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟&quot;,
+            &quot;customer_id&quot;: &quot;C05&quot;,
+            &quot;language&quot;: &quot;ar&quot;,
+            &quot;classification&quot;: &quot;access request&quot;,
+            &quot;priority&quot;: &quot;Normal&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: ordinary account-access requests are Normal priority.&quot;,
+            &quot;draft&quot;: &quot;شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S02&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;draft_source_ids&quot;: [
+              &quot;S02&quot;,
+              &quot;P02&quot;
+            ]
+          }
+        },
+        &quot;action_status&quot;: &quot;pending_approval&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;customer_service&quot;,
+      &quot;request&quot;: &quot;draft a ticket for S03&quot;,
+      &quot;total_seconds&quot;: 0.4127,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.4025
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-3&quot;,
+        &quot;department&quot;: &quot;customer_service&quot;,
+        &quot;result&quot;: {
+          &quot;clarification&quot;: &quot;Please provide the customer ID needed to locate the account. No identity was invented.&quot;,
+          &quot;classification&quot;: &quot;information request&quot;,
+          &quot;priority&quot;: &quot;Normal&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: no evidenced successful-payment/missing-confirmation report; ordinary enquiries are Normal.&quot;
+        },
+        &quot;sources&quot;: [
+          &quot;S03&quot;,
+          &quot;P02&quot;
+        ],
+        &quot;missing_information&quot;: [
+          &quot;customer identity&quot;
+        ],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;needs_information&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;customer_service&quot;,
+      &quot;request&quot;: &quot;process S04&quot;,
+      &quot;total_seconds&quot;: 0.3962,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.382
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-4&quot;,
+        &quot;department&quot;: &quot;customer_service&quot;,
+        &quot;result&quot;: &quot;The source contains restricted content or untrusted instructions. No authority or action changed.&quot;,
+        &quot;sources&quot;: [
+          &quot;S04&quot;,
+          &quot;P03&quot;
+        ],
+        &quot;missing_information&quot;: [],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;blocked&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;product&quot;,
+      &quot;request&quot;: &quot;prioritize the product feedback&quot;,
+      &quot;total_seconds&quot;: 2.9923,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.346
+        },
+        {
+          &quot;task&quot;: &quot;DRAFT&quot;,
+          &quot;seconds&quot;: 2.6276
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-5&quot;,
+        &quot;department&quot;: &quot;product&quot;,
+        &quot;result&quot;: {
+          &quot;themes&quot;: [
+            {
+              &quot;theme&quot;: &quot;payment confirmation&quot;,
+              &quot;evidence_ids&quot;: [
+                &quot;F01&quot;,
+                &quot;F02&quot;
+              ],
+              &quot;record_count&quot;: 2,
+              &quot;problem_statement&quot;: &quot;Investigate reported payment-confirmation uncertainty.&quot;,
+              &quot;acceptance_criteria&quot;: &quot;Given a successful test payment, its confirmation state is visible; a missing state shows an investigation path.&quot;,
+              &quot;priority&quot;: &quot;High&quot;,
+              &quot;priority_rationale&quot;: &quot;P02 prioritizes credible successful-payment reports with missing confirmation, not feedback frequency.&quot;,
+              &quot;implementation_dependencies&quot;: [
+                &quot;Reproduce reported confirmation gaps with authorized test-payment records.&quot;,
+                &quot;Inspect the payment-to-confirmation flow; backend behavior and ownership are unknown.&quot;
+              ],
+              &quot;dependency_status&quot;: &quot;Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown.&quot;
+            },
+            {
+              &quot;theme&quot;: &quot;login recovery&quot;,
+              &quot;evidence_ids&quot;: [
+                &quot;F03&quot;
+              ],
+              &quot;record_count&quot;: 1,
+              &quot;problem_statement&quot;: &quot;Investigate reported account-recovery friction.&quot;,
+              &quot;acceptance_criteria&quot;: &quot;Given a test account, a user completes the documented recovery flow and signs in without unexplained steps.&quot;,
+              &quot;priority&quot;: &quot;Normal&quot;,
+              &quot;priority_rationale&quot;: &quot;Account-access friction affects usability; incident severity is not established by feedback count.&quot;,
+              &quot;implementation_dependencies&quot;: [
+                &quot;Document the existing recovery flow using authorized test accounts.&quot;,
+                &quot;Review authentication behavior and account-recovery requirements with the responsible team.&quot;
+              ],
+              &quot;dependency_status&quot;: &quot;Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown.&quot;
+            },
+            {
+              &quot;theme&quot;: &quot;mobile lead form&quot;,
+              &quot;evidence_ids&quot;: [
+                &quot;F04&quot;
+              ],
+              &quot;record_count&quot;: 1,
+              &quot;problem_statement&quot;: &quot;Investigate reported mobile lead-form friction.&quot;,
+              &quot;acceptance_criteria&quot;: &quot;At a 360-pixel viewport, required fields and validation remain visible and a valid test submission completes.&quot;,
+              &quot;priority&quot;: &quot;Normal&quot;,
+              &quot;priority_rationale&quot;: &quot;Mobile intake usability needs investigation; frequency alone does not establish incident severity.&quot;,
+              &quot;implementation_dependencies&quot;: [
+                &quot;Reproduce the reported friction at a 360-pixel viewport.&quot;,
+                &quot;Inspect form validation and submission behavior using test data before choosing changes.&quot;
+              ],
+              &quot;dependency_status&quot;: &quot;Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown.&quot;
+            },
+            {
+              &quot;theme&quot;: &quot;fractional ownership research&quot;,
+              &quot;evidence_ids&quot;: [
+                &quot;F05&quot;
+              ],
+              &quot;record_count&quot;: 1,
+              &quot;problem_statement&quot;: &quot;Investigate fractional resale feedback internally.&quot;,
+              &quot;acceptance_criteria&quot;: &quot;Research records constraints and open questions without a release, transaction, or regulatory approval claim.&quot;,
+              &quot;priority&quot;: &quot;Low&quot;,
+              &quot;priority_rationale&quot;: &quot;P01 permits internal research only; commercial execution remains paused.&quot;,
+              &quot;implementation_dependencies&quot;: [
+                &quot;Review P01 constraints before internal research; commercial execution remains paused.&quot;,
+                &quot;Investigate resale feasibility and unresolved regulatory questions; no approval or release is confirmed.&quot;
+              ],
+              &quot;dependency_status&quot;: &quot;Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown.&quot;
+            }
+          ],
+          &quot;unclassified_feedback_ids&quot;: [],
+          &quot;top_three_backlog_items&quot;: [
+            {
+              &quot;theme&quot;: &quot;payment confirmation&quot;,
+              &quot;evidence_ids&quot;: [
+                &quot;F01&quot;,
+                &quot;F02&quot;
+              ],
+              &quot;record_count&quot;: 2,
+              &quot;problem_statement&quot;: &quot;Investigate reported payment-confirmation uncertainty.&quot;,
+              &quot;acceptance_criteria&quot;: &quot;Given a successful test payment, its confirmation state is visible; a missing state shows an investigation path.&quot;,
+              &quot;priority&quot;: &quot;High&quot;,
+              &quot;priority_rationale&quot;: &quot;P02 prioritizes credible successful-payment reports with missing confirmation, not feedback frequency.&quot;,
+              &quot;implementation_dependencies&quot;: [
+                &quot;Reproduce reported confirmation gaps with authorized test-payment records.&quot;,
+                &quot;Inspect the payment-to-confirmation flow; backend behavior and ownership are unknown.&quot;
+              ],
+              &quot;dependency_status&quot;: &quot;Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown.&quot;
+            },
+            {
+              &quot;theme&quot;: &quot;login recovery&quot;,
+              &quot;evidence_ids&quot;: [
+                &quot;F03&quot;
+              ],
+              &quot;record_count&quot;: 1,
+              &quot;problem_statement&quot;: &quot;Investigate reported account-recovery friction.&quot;,
+              &quot;acceptance_criteria&quot;: &quot;Given a test account, a user completes the documented recovery flow and signs in without unexplained steps.&quot;,
+              &quot;priority&quot;: &quot;Normal&quot;,
+              &quot;priority_rationale&quot;: &quot;Account-access friction affects usability; incident severity is not established by feedback count.&quot;,
+              &quot;implementation_dependencies&quot;: [
+                &quot;Document the existing recovery flow using authorized test accounts.&quot;,
+                &quot;Review authentication behavior and account-recovery requirements with the responsible team.&quot;
+              ],
+              &quot;dependency_status&quot;: &quot;Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown.&quot;
+            },
+            {
+              &quot;theme&quot;: &quot;mobile lead form&quot;,
+              &quot;evidence_ids&quot;: [
+                &quot;F04&quot;
+              ],
+              &quot;record_count&quot;: 1,
+              &quot;problem_statement&quot;: &quot;Investigate reported mobile lead-form friction.&quot;,
+              &quot;acceptance_criteria&quot;: &quot;At a 360-pixel viewport, required fields and validation remain visible and a valid test submission completes.&quot;,
+              &quot;priority&quot;: &quot;Normal&quot;,
+              &quot;priority_rationale&quot;: &quot;Mobile intake usability needs investigation; frequency alone does not establish incident severity.&quot;,
+              &quot;implementation_dependencies&quot;: [
+                &quot;Reproduce the reported friction at a 360-pixel viewport.&quot;,
+                &quot;Inspect form validation and submission behavior using test data before choosing changes.&quot;
+              ],
+              &quot;dependency_status&quot;: &quot;Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown.&quot;
+            }
+          ],
+          &quot;priority_rationale&quot;: &quot;The backlog themes are as follows, in order of priority:\n\n**High Priority:**\n- **Payment Confirmation (F01, F02)**: Investigate reported payment confirmation uncertainty. Given a successful test payment, its confirmation state must be visible; a missing state should show an investigation path.\n\n**Normal Priority:**\n- **Login Recovery (F03)**: Investigate reported account recovery friction. A user should complete the documented recovery flow and sign in without unexplained steps.\n- **Mobile Lead Form (F04)**: Investigate reported mobile lead form friction. At a 360-pixel viewport, required fields and validation must remain visible, and a valid test submission should complete.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;P02&quot;,
+            &quot;F01&quot;,
+            &quot;F02&quot;,
+            &quot;F03&quot;,
+            &quot;F04&quot;
+          ]
+        },
+        &quot;sources&quot;: [
+          &quot;P01&quot;,
+          &quot;P02&quot;,
+          &quot;P03&quot;,
+          &quot;F01&quot;,
+          &quot;F02&quot;,
+          &quot;F03&quot;,
+          &quot;F04&quot;,
+          &quot;F05&quot;
+        ],
+        &quot;missing_information&quot;: [
+          &quot;Incident severity is not established by feedback frequency.&quot;
+        ],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;draft&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;tech&quot;,
+      &quot;request&quot;: &quot;triage the intake failures&quot;,
+      &quot;total_seconds&quot;: 2.8599,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.395
+        },
+        {
+          &quot;task&quot;: &quot;DRAFT&quot;,
+          &quot;seconds&quot;: 2.4428
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-6&quot;,
+        &quot;department&quot;: &quot;tech&quot;,
+        &quot;result&quot;: {
+          &quot;severity&quot;: &quot;High&quot;,
+          &quot;severity_rationale&quot;: &quot;P02: repeated lead-intake server errors require High priority.&quot;,
+          &quot;observed_facts&quot;: [
+            &quot;I01: lead_intake reported HTTP 500 for R101&quot;,
+            &quot;I02: crm_mock reported timeout for R101&quot;,
+            &quot;I03: lead_intake reported HTTP 500 for R102&quot;,
+            &quot;I04: lead_intake reported HTTP 200 for R103&quot;
+          ],
+          &quot;hypotheses&quot;: [
+            &quot;A timeout on the same request may be related; shared request IDs do not prove causation.&quot;
+          ],
+          &quot;recovery_assessment&quot;: &quot;A later successful request does not prove complete recovery: I04&quot;,
+          &quot;next_diagnostic_step&quot;: &quot;Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.&quot;,
+          &quot;draft_note&quot;: &quot;Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;I01&quot;,
+            &quot;I02&quot;,
+            &quot;I03&quot;,
+            &quot;I04&quot;
+          ]
+        },
+        &quot;sources&quot;: [
+          &quot;I01&quot;,
+          &quot;I02&quot;,
+          &quot;I03&quot;,
+          &quot;I04&quot;,
+          &quot;P02&quot;
+        ],
+        &quot;missing_information&quot;: [
+          &quot;Root cause and complete recovery are unknown.&quot;
+        ],
+        &quot;proposed_action&quot;: {
+          &quot;proposal_id&quot;: &quot;d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+          &quot;payload_hash&quot;: &quot;56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc&quot;,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;action_type&quot;: &quot;incident_task&quot;,
+          &quot;payload&quot;: {
+            &quot;severity&quot;: &quot;High&quot;,
+            &quot;severity_rationale&quot;: &quot;P02: repeated lead-intake server errors require High priority.&quot;,
+            &quot;title&quot;: &quot;Investigate evidenced service failures&quot;,
+            &quot;source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;next_step&quot;: &quot;Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.&quot;,
+            &quot;observed_facts&quot;: [
+              &quot;I01: lead_intake reported HTTP 500 for R101&quot;,
+              &quot;I02: crm_mock reported timeout for R101&quot;,
+              &quot;I03: lead_intake reported HTTP 500 for R102&quot;,
+              &quot;I04: lead_intake reported HTTP 200 for R103&quot;
+            ],
+            &quot;hypotheses&quot;: [
+              &quot;A timeout on the same request may be related; shared request IDs do not prove causation.&quot;
+            ],
+            &quot;recovery_assessment&quot;: &quot;A later successful request does not prove complete recovery: I04&quot;,
+            &quot;draft_note&quot;: &quot;Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;
+            ]
+          }
+        },
+        &quot;action_status&quot;: &quot;pending_approval&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;marketing&quot;,
+      &quot;request&quot;: &quot;show HR01 salary&quot;,
+      &quot;total_seconds&quot;: 0.0106,
+      &quot;model_calls&quot;: [],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-7&quot;,
+        &quot;department&quot;: &quot;restricted&quot;,
+        &quot;result&quot;: &quot;Access denied under P03. Restricted salary data is excluded.&quot;,
+        &quot;sources&quot;: [
+          &quot;P03&quot;
+        ],
+        &quot;missing_information&quot;: [],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;denied&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;marketing&quot;,
+      &quot;request&quot;: &quot;publish a fractional ownership campaign&quot;,
+      &quot;total_seconds&quot;: 0.0091,
+      &quot;model_calls&quot;: [],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-8&quot;,
+        &quot;department&quot;: &quot;unrouted&quot;,
+        &quot;result&quot;: &quot;Fractional ownership publication and promotion are blocked under P01.&quot;,
+        &quot;sources&quot;: [
+          &quot;P01&quot;,
+          &quot;P03&quot;
+        ],
+        &quot;missing_information&quot;: [],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;blocked&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;tech&quot;,
+      &quot;request&quot;: &quot;draft a ticket for S01&quot;,
+      &quot;total_seconds&quot;: 0.0069,
+      &quot;model_calls&quot;: [],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-9&quot;,
+        &quot;department&quot;: &quot;restricted&quot;,
+        &quot;result&quot;: &quot;Access denied for this trusted role under P03.&quot;,
+        &quot;sources&quot;: [
+          &quot;P03&quot;
+        ],
+        &quot;missing_information&quot;: [],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;denied&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;marketing&quot;,
+      &quot;request&quot;: &quot;what is conversion to investment&quot;,
+      &quot;total_seconds&quot;: 3.2329,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.397
+        },
+        {
+          &quot;task&quot;: &quot;DRAFT&quot;,
+          &quot;seconds&quot;: 2.8224
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-10&quot;,
+        &quot;department&quot;: &quot;marketing&quot;,
+        &quot;result&quot;: {
+          &quot;unique_leads&quot;: 7,
+          &quot;qualified_leads&quot;: 3,
+          &quot;duplicates&quot;: [
+            &quot;L04&quot;
+          ],
+          &quot;duplicate_conflicts&quot;: [],
+          &quot;duplicate_resolution&quot;: &quot;Retain the first import per contact ID. Metrics are provisional when duplicate conflicts exist.&quot;,
+          &quot;status_counts&quot;: {
+            &quot;Qualified&quot;: 3,
+            &quot;New&quot;: 2,
+            &quot;Unqualified&quot;: 1,
+            &quot;Contacted&quot;: 1
+          },
+          &quot;missing_budget_count&quot;: 2,
+          &quot;missing_source_count&quot;: 1,
+          &quot;by_source&quot;: {
+            &quot;Paid Search&quot;: {
+              &quot;unique_leads&quot;: 2,
+              &quot;qualified_leads&quot;: 1,
+              &quot;status_counts&quot;: {
+                &quot;Qualified&quot;: 1,
+                &quot;Unqualified&quot;: 1
+              },
+              &quot;spend_sar&quot;: 1200,
+              &quot;qualification_rate&quot;: 0.5,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: 600.0
+            },
+            &quot;Social&quot;: {
+              &quot;unique_leads&quot;: 2,
+              &quot;qualified_leads&quot;: 0,
+              &quot;status_counts&quot;: {
+                &quot;New&quot;: 1,
+                &quot;Contacted&quot;: 1
+              },
+              &quot;spend_sar&quot;: 800,
+              &quot;qualification_rate&quot;: 0.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: 400.0
+            },
+            &quot;Referral&quot;: {
+              &quot;unique_leads&quot;: 1,
+              &quot;qualified_leads&quot;: 1,
+              &quot;status_counts&quot;: {
+                &quot;Qualified&quot;: 1
+              },
+              &quot;spend_sar&quot;: null,
+              &quot;qualification_rate&quot;: 1.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: null
+            },
+            &quot;Organic&quot;: {
+              &quot;unique_leads&quot;: 1,
+              &quot;qualified_leads&quot;: 1,
+              &quot;status_counts&quot;: {
+                &quot;Qualified&quot;: 1
+              },
+              &quot;spend_sar&quot;: null,
+              &quot;qualification_rate&quot;: 1.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: null
+            },
+            &quot;Unknown&quot;: {
+              &quot;unique_leads&quot;: 1,
+              &quot;qualified_leads&quot;: 0,
+              &quot;status_counts&quot;: {
+                &quot;New&quot;: 1
+              },
+              &quot;spend_sar&quot;: null,
+              &quot;qualification_rate&quot;: 0.0,
+              &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads for this source, deduplicated by contact ID&quot;,
+              &quot;cost_denominator&quot;: &quot;source spend / unique leads for this source, deduplicated by contact ID; not cost per investor&quot;,
+              &quot;cost_per_unique_lead_sar&quot;: null
+            }
+          },
+          &quot;qualification_rate&quot;: 0.42857142857142855,
+          &quot;qualification_rate_denominator&quot;: &quot;qualified leads / unique leads, deduplicated by contact ID&quot;,
+          &quot;management_summary&quot;: &quot;Here&#x27;s a summary of lead metrics:\n\n- Total unique leads: 7\n- Qualified leads: 3 (42.86% qualification rate)\n- Duplicate leads: L04\n\nBy source:\n\n- Paid Search: 2 unique leads, 1 qualified (50% qualification rate), SAR 1200 spend, SAR 600 cost per unique lead\n- Social: 2 unique leads, 0 qualified (0% qualification rate), SAR 800 spend, SAR 400 cost per unique lead\n- Referral &amp; Organic: Both had 1 unique and qualified lead each, with unknown spend\n- Unknown source: 1 unique lead, 0 qualified\n\nUnknowns: Spend for Referral, Organic, and Unknown sources; budgets for 2 leads.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;P01&quot;,
+            &quot;L01&quot;
+          ],
+          &quot;recommendations&quot;: [
+            &quot;Review Qualified leads for follow-up through approved channels; this analysis contacts nobody.&quot;,
+            &quot;Complete unknown source, budget, and spend data before reallocating spend.&quot;
+          ],
+          &quot;recommendation_source_ids&quot;: [
+            [
+              &quot;P03&quot;,
+              &quot;L01&quot;,
+              &quot;L02&quot;,
+              &quot;L03&quot;,
+              &quot;L04&quot;,
+              &quot;L05&quot;,
+              &quot;L06&quot;,
+              &quot;L07&quot;,
+              &quot;L08&quot;
+            ],
+            [
+              &quot;P01&quot;,
+              &quot;L01&quot;,
+              &quot;L02&quot;,
+              &quot;L03&quot;,
+              &quot;L04&quot;,
+              &quot;L05&quot;,
+              &quot;L06&quot;,
+              &quot;L07&quot;,
+              &quot;L08&quot;
+            ]
+          ]
+        },
+        &quot;sources&quot;: [
+          &quot;P01&quot;,
+          &quot;P02&quot;,
+          &quot;P03&quot;,
+          &quot;L01&quot;,
+          &quot;L02&quot;,
+          &quot;L03&quot;,
+          &quot;L04&quot;,
+          &quot;L05&quot;,
+          &quot;L06&quot;,
+          &quot;L07&quot;,
+          &quot;L08&quot;
+        ],
+        &quot;missing_information&quot;: [
+          &quot;No sale or investment conversion data is available.&quot;,
+          &quot;Referral spend is unknown, not zero.&quot;,
+          &quot;Organic spend is unknown, not zero.&quot;,
+          &quot;Unknown spend is unknown, not zero.&quot;,
+          &quot;1 unique lead(s) have an unknown source.&quot;,
+          &quot;2 unique lead(s) have unknown budgets.&quot;
+        ],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;complete&quot;
+      }
+    },
+    {
+      &quot;role&quot;: &quot;marketing&quot;,
+      &quot;request&quot;: &quot;Please handle this issue&quot;,
+      &quot;total_seconds&quot;: 0.6087,
+      &quot;model_calls&quot;: [
+        {
+          &quot;task&quot;: &quot;CLASSIFY&quot;,
+          &quot;seconds&quot;: 0.5924
+        }
+      ],
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;demo-11&quot;,
+        &quot;department&quot;: &quot;unrouted&quot;,
+        &quot;result&quot;: &quot;Could you please specify the nature of the issue you&#x27;re facing?&quot;,
+        &quot;sources&quot;: [],
+        &quot;missing_information&quot;: [
+          &quot;department&quot;
+        ],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;needs_clarification&quot;
+      }
+    }
+  ],
+  &quot;decisions&quot;: [
+    {
+      &quot;inspection&quot;: {
+        &quot;proposal_id&quot;: &quot;4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+        &quot;request_id&quot;: &quot;demo-1&quot;,
+        &quot;action_type&quot;: &quot;desk_ticket&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+        &quot;payload&quot;: {
+          &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+          &quot;customer_id&quot;: &quot;C01&quot;,
+          &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S01&quot;
+          ],
+          &quot;language&quot;: &quot;en&quot;,
+          &quot;message_id&quot;: &quot;S01&quot;,
+          &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+          &quot;priority&quot;: &quot;High&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+          &quot;source_ids&quot;: [
+            &quot;S01&quot;,
+            &quot;P02&quot;
+          ]
+        },
+        &quot;decision&quot;: null
+      },
+      &quot;first&quot;: {
+        &quot;proposal_id&quot;: &quot;4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+        &quot;execution_key&quot;: &quot;4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+        &quot;adapter_result_json&quot;: &quot;{\&quot;action_id\&quot;:\&quot;TICKET-4275a5d6-6078-4f61-b956-980d5ef33add\&quot;,\&quot;verified\&quot;:true}&quot;,
+        &quot;outcome&quot;: &quot;succeeded&quot;,
+        &quot;attempts&quot;: 2,
+        &quot;updated_at&quot;: &quot;2026-10-05T18:50:14.268377+00:00&quot;,
+        &quot;action&quot;: {
+          &quot;action_id&quot;: &quot;TICKET-4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ],
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;
+        },
+        &quot;attempt_history&quot;: [
+          {
+            &quot;attempt&quot;: 1,
+            &quot;outcome&quot;: &quot;transient_failure&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.268253+00:00&quot;
+          },
+          {
+            &quot;attempt&quot;: 2,
+            &quot;outcome&quot;: &quot;succeeded&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.268385+00:00&quot;
+          }
+        ]
+      },
+      &quot;after_restart&quot;: {
+        &quot;proposal_id&quot;: &quot;4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+        &quot;execution_key&quot;: &quot;4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+        &quot;adapter_result_json&quot;: &quot;{\&quot;action_id\&quot;:\&quot;TICKET-4275a5d6-6078-4f61-b956-980d5ef33add\&quot;,\&quot;verified\&quot;:true}&quot;,
+        &quot;outcome&quot;: &quot;succeeded&quot;,
+        &quot;attempts&quot;: 2,
+        &quot;updated_at&quot;: &quot;2026-10-05T18:50:14.268377+00:00&quot;,
+        &quot;action&quot;: {
+          &quot;action_id&quot;: &quot;TICKET-4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ],
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;
+        },
+        &quot;attempt_history&quot;: [
+          {
+            &quot;attempt&quot;: 1,
+            &quot;outcome&quot;: &quot;transient_failure&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.268253+00:00&quot;
+          },
+          {
+            &quot;attempt&quot;: 2,
+            &quot;outcome&quot;: &quot;succeeded&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.268385+00:00&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;inspection&quot;: {
+        &quot;proposal_id&quot;: &quot;14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+        &quot;request_id&quot;: &quot;demo-2&quot;,
+        &quot;action_type&quot;: &quot;desk_ticket&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;payload_hash&quot;: &quot;2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42&quot;,
+        &quot;payload&quot;: {
+          &quot;classification&quot;: &quot;access request&quot;,
+          &quot;customer_id&quot;: &quot;C05&quot;,
+          &quot;draft&quot;: &quot;شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S02&quot;,
+            &quot;P02&quot;
+          ],
+          &quot;language&quot;: &quot;ar&quot;,
+          &quot;message_id&quot;: &quot;S02&quot;,
+          &quot;message_text&quot;: &quot;لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟&quot;,
+          &quot;priority&quot;: &quot;Normal&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: ordinary account-access requests are Normal priority.&quot;,
+          &quot;source_ids&quot;: [
+            &quot;S02&quot;,
+            &quot;P02&quot;
+          ]
+        },
+        &quot;decision&quot;: null
+      },
+      &quot;first&quot;: {
+        &quot;proposal_id&quot;: &quot;14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+        &quot;execution_key&quot;: &quot;14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+        &quot;adapter_result_json&quot;: null,
+        &quot;outcome&quot;: &quot;uncertain&quot;,
+        &quot;attempts&quot;: 1,
+        &quot;updated_at&quot;: &quot;2026-10-05T18:50:14.279764+00:00&quot;,
+        &quot;action&quot;: null,
+        &quot;attempt_history&quot;: [
+          {
+            &quot;attempt&quot;: 1,
+            &quot;outcome&quot;: &quot;uncertain&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.279815+00:00&quot;
+          }
+        ],
+        &quot;reconciliation_required&quot;: true
+      },
+      &quot;after_restart&quot;: {
+        &quot;proposal_id&quot;: &quot;14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+        &quot;execution_key&quot;: &quot;14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+        &quot;adapter_result_json&quot;: &quot;{\&quot;action_id\&quot;:\&quot;TICKET-14fb7694-0d34-4010-8a35-408b3a507e2f\&quot;,\&quot;verified\&quot;:true}&quot;,
+        &quot;outcome&quot;: &quot;succeeded&quot;,
+        &quot;attempts&quot;: 2,
+        &quot;updated_at&quot;: &quot;2026-10-05T18:50:14.287047+00:00&quot;,
+        &quot;action&quot;: {
+          &quot;action_id&quot;: &quot;TICKET-14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;access request&quot;,
+            &quot;customer_id&quot;: &quot;C05&quot;,
+            &quot;draft&quot;: &quot;شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S02&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;language&quot;: &quot;ar&quot;,
+            &quot;message_id&quot;: &quot;S02&quot;,
+            &quot;message_text&quot;: &quot;لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟&quot;,
+            &quot;priority&quot;: &quot;Normal&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: ordinary account-access requests are Normal priority.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S02&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;payload_hash&quot;: &quot;2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42&quot;
+        },
+        &quot;attempt_history&quot;: [
+          {
+            &quot;attempt&quot;: 1,
+            &quot;outcome&quot;: &quot;uncertain&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.279815+00:00&quot;
+          },
+          {
+            &quot;attempt&quot;: 2,
+            &quot;outcome&quot;: &quot;succeeded&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.287308+00:00&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;inspection&quot;: {
+        &quot;proposal_id&quot;: &quot;d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+        &quot;request_id&quot;: &quot;demo-6&quot;,
+        &quot;action_type&quot;: &quot;incident_task&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;payload_hash&quot;: &quot;56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc&quot;,
+        &quot;payload&quot;: {
+          &quot;draft_note&quot;: &quot;Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;I01&quot;,
+            &quot;I02&quot;,
+            &quot;I03&quot;,
+            &quot;I04&quot;
+          ],
+          &quot;hypotheses&quot;: [
+            &quot;A timeout on the same request may be related; shared request IDs do not prove causation.&quot;
+          ],
+          &quot;next_step&quot;: &quot;Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.&quot;,
+          &quot;observed_facts&quot;: [
+            &quot;I01: lead_intake reported HTTP 500 for R101&quot;,
+            &quot;I02: crm_mock reported timeout for R101&quot;,
+            &quot;I03: lead_intake reported HTTP 500 for R102&quot;,
+            &quot;I04: lead_intake reported HTTP 200 for R103&quot;
+          ],
+          &quot;recovery_assessment&quot;: &quot;A later successful request does not prove complete recovery: I04&quot;,
+          &quot;severity&quot;: &quot;High&quot;,
+          &quot;severity_rationale&quot;: &quot;P02: repeated lead-intake server errors require High priority.&quot;,
+          &quot;source_ids&quot;: [
+            &quot;I01&quot;,
+            &quot;I02&quot;,
+            &quot;I03&quot;,
+            &quot;I04&quot;,
+            &quot;P02&quot;
+          ],
+          &quot;title&quot;: &quot;Investigate evidenced service failures&quot;
+        },
+        &quot;decision&quot;: null
+      },
+      &quot;first&quot;: {
+        &quot;proposal_id&quot;: &quot;d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+        &quot;execution_key&quot;: &quot;d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+        &quot;adapter_result_json&quot;: &quot;{\&quot;action_id\&quot;:\&quot;TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863\&quot;,\&quot;verified\&quot;:true}&quot;,
+        &quot;outcome&quot;: &quot;succeeded&quot;,
+        &quot;attempts&quot;: 1,
+        &quot;updated_at&quot;: &quot;2026-10-05T18:50:14.298288+00:00&quot;,
+        &quot;action&quot;: {
+          &quot;action_id&quot;: &quot;TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+          &quot;action_type&quot;: &quot;incident_task&quot;,
+          &quot;payload&quot;: {
+            &quot;draft_note&quot;: &quot;Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;
+            ],
+            &quot;hypotheses&quot;: [
+              &quot;A timeout on the same request may be related; shared request IDs do not prove causation.&quot;
+            ],
+            &quot;next_step&quot;: &quot;Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.&quot;,
+            &quot;observed_facts&quot;: [
+              &quot;I01: lead_intake reported HTTP 500 for R101&quot;,
+              &quot;I02: crm_mock reported timeout for R101&quot;,
+              &quot;I03: lead_intake reported HTTP 500 for R102&quot;,
+              &quot;I04: lead_intake reported HTTP 200 for R103&quot;
+            ],
+            &quot;recovery_assessment&quot;: &quot;A later successful request does not prove complete recovery: I04&quot;,
+            &quot;severity&quot;: &quot;High&quot;,
+            &quot;severity_rationale&quot;: &quot;P02: repeated lead-intake server errors require High priority.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;title&quot;: &quot;Investigate evidenced service failures&quot;
+          },
+          &quot;payload_hash&quot;: &quot;56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc&quot;
+        },
+        &quot;attempt_history&quot;: [
+          {
+            &quot;attempt&quot;: 1,
+            &quot;outcome&quot;: &quot;succeeded&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.298316+00:00&quot;
+          }
+        ]
+      },
+      &quot;after_restart&quot;: {
+        &quot;proposal_id&quot;: &quot;d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+        &quot;execution_key&quot;: &quot;d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+        &quot;adapter_result_json&quot;: &quot;{\&quot;action_id\&quot;:\&quot;TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863\&quot;,\&quot;verified\&quot;:true}&quot;,
+        &quot;outcome&quot;: &quot;succeeded&quot;,
+        &quot;attempts&quot;: 1,
+        &quot;updated_at&quot;: &quot;2026-10-05T18:50:14.298288+00:00&quot;,
+        &quot;action&quot;: {
+          &quot;action_id&quot;: &quot;TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+          &quot;action_type&quot;: &quot;incident_task&quot;,
+          &quot;payload&quot;: {
+            &quot;draft_note&quot;: &quot;Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;
+            ],
+            &quot;hypotheses&quot;: [
+              &quot;A timeout on the same request may be related; shared request IDs do not prove causation.&quot;
+            ],
+            &quot;next_step&quot;: &quot;Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.&quot;,
+            &quot;observed_facts&quot;: [
+              &quot;I01: lead_intake reported HTTP 500 for R101&quot;,
+              &quot;I02: crm_mock reported timeout for R101&quot;,
+              &quot;I03: lead_intake reported HTTP 500 for R102&quot;,
+              &quot;I04: lead_intake reported HTTP 200 for R103&quot;
+            ],
+            &quot;recovery_assessment&quot;: &quot;A later successful request does not prove complete recovery: I04&quot;,
+            &quot;severity&quot;: &quot;High&quot;,
+            &quot;severity_rationale&quot;: &quot;P02: repeated lead-intake server errors require High priority.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;title&quot;: &quot;Investigate evidenced service failures&quot;
+          },
+          &quot;payload_hash&quot;: &quot;56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc&quot;
+        },
+        &quot;attempt_history&quot;: [
+          {
+            &quot;attempt&quot;: 1,
+            &quot;outcome&quot;: &quot;succeeded&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:14.298316+00:00&quot;
+          }
+        ]
+      }
+    }
+  ],
+  &quot;acceptance_checks&quot;: [
+    {
+      &quot;scenario&quot;: &quot;rejected&quot;,
+      &quot;passed&quot;: true,
+      &quot;error&quot;: null,
+      &quot;inspection&quot;: {
+        &quot;proposal_id&quot;: &quot;ebeb8205-ce59-41a1-a351-5072fb685c14&quot;,
+        &quot;request_id&quot;: &quot;acceptance-rejected&quot;,
+        &quot;action_type&quot;: &quot;desk_ticket&quot;,
+        &quot;status&quot;: &quot;rejected&quot;,
+        &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+        &quot;payload&quot;: {
+          &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+          &quot;customer_id&quot;: &quot;C01&quot;,
+          &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S01&quot;
+          ],
+          &quot;language&quot;: &quot;en&quot;,
+          &quot;message_id&quot;: &quot;S01&quot;,
+          &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+          &quot;priority&quot;: &quot;High&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+          &quot;source_ids&quot;: [
+            &quot;S01&quot;,
+            &quot;P02&quot;
+          ]
+        },
+        &quot;decision&quot;: {
+          &quot;approval_id&quot;: &quot;fd8ad7d7-b4c9-48e4-ba82-7f46dbb73e64&quot;,
+          &quot;decision&quot;: &quot;rejected&quot;,
+          &quot;reviewer_role&quot;: &quot;ops_reviewer&quot;,
+          &quot;reviewer_actor_id&quot;: &quot;demo-reviewer&quot;,
+          &quot;decided_at&quot;: &quot;2026-10-05T18:50:15.380998+00:00&quot;
+        }
+      },
+      &quot;outcome&quot;: {
+        &quot;proposal_id&quot;: &quot;ebeb8205-ce59-41a1-a351-5072fb685c14&quot;,
+        &quot;outcome&quot;: &quot;not_executed&quot;,
+        &quot;action&quot;: null,
+        &quot;attempt_history&quot;: []
+      },
+      &quot;stored_action_count&quot;: 0,
+      &quot;mode&quot;: &quot;real draft, controlled reviewer operation&quot;
+    },
+    {
+      &quot;scenario&quot;: &quot;edited_hash&quot;,
+      &quot;passed&quot;: true,
+      &quot;error&quot;: &quot;proposal ID or immutable payload hash does not match&quot;,
+      &quot;inspection&quot;: {
+        &quot;proposal_id&quot;: &quot;02a5d0f1-7334-42ef-b8c6-d056b827bb92&quot;,
+        &quot;request_id&quot;: &quot;acceptance-edited_hash&quot;,
+        &quot;action_type&quot;: &quot;desk_ticket&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+        &quot;payload&quot;: {
+          &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+          &quot;customer_id&quot;: &quot;C01&quot;,
+          &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S01&quot;
+          ],
+          &quot;language&quot;: &quot;en&quot;,
+          &quot;message_id&quot;: &quot;S01&quot;,
+          &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+          &quot;priority&quot;: &quot;High&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+          &quot;source_ids&quot;: [
+            &quot;S01&quot;,
+            &quot;P02&quot;
+          ]
+        },
+        &quot;decision&quot;: null
+      },
+      &quot;outcome&quot;: {
+        &quot;proposal_id&quot;: &quot;02a5d0f1-7334-42ef-b8c6-d056b827bb92&quot;,
+        &quot;outcome&quot;: &quot;not_executed&quot;,
+        &quot;action&quot;: null,
+        &quot;attempt_history&quot;: []
+      },
+      &quot;stored_action_count&quot;: 0,
+      &quot;mode&quot;: &quot;real draft, controlled reviewer operation&quot;
+    },
+    {
+      &quot;scenario&quot;: &quot;always_fail&quot;,
+      &quot;passed&quot;: true,
+      &quot;error&quot;: null,
+      &quot;inspection&quot;: {
+        &quot;proposal_id&quot;: &quot;7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1&quot;,
+        &quot;request_id&quot;: &quot;acceptance-always_fail&quot;,
+        &quot;action_type&quot;: &quot;desk_ticket&quot;,
+        &quot;status&quot;: &quot;failed&quot;,
+        &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+        &quot;payload&quot;: {
+          &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+          &quot;customer_id&quot;: &quot;C01&quot;,
+          &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S01&quot;
+          ],
+          &quot;language&quot;: &quot;en&quot;,
+          &quot;message_id&quot;: &quot;S01&quot;,
+          &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+          &quot;priority&quot;: &quot;High&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+          &quot;source_ids&quot;: [
+            &quot;S01&quot;,
+            &quot;P02&quot;
+          ]
+        },
+        &quot;decision&quot;: {
+          &quot;approval_id&quot;: &quot;dddded73-6ed0-4481-a47b-cde8d5dba524&quot;,
+          &quot;decision&quot;: &quot;approved&quot;,
+          &quot;reviewer_role&quot;: &quot;ops_reviewer&quot;,
+          &quot;reviewer_actor_id&quot;: &quot;demo-reviewer&quot;,
+          &quot;decided_at&quot;: &quot;2026-10-05T18:50:17.542566+00:00&quot;
+        }
+      },
+      &quot;outcome&quot;: {
+        &quot;proposal_id&quot;: &quot;7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1&quot;,
+        &quot;execution_key&quot;: &quot;7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1&quot;,
+        &quot;adapter_result_json&quot;: null,
+        &quot;outcome&quot;: &quot;adapter_failure&quot;,
+        &quot;attempts&quot;: 1,
+        &quot;updated_at&quot;: &quot;2026-10-05T18:50:17.544533+00:00&quot;,
+        &quot;action&quot;: null,
+        &quot;attempt_history&quot;: [
+          {
+            &quot;attempt&quot;: 1,
+            &quot;outcome&quot;: &quot;adapter_failure&quot;,
+            &quot;created_at&quot;: &quot;2026-10-05T18:50:17.544620+00:00&quot;
+          }
+        ]
+      },
+      &quot;stored_action_count&quot;: 0,
+      &quot;mode&quot;: &quot;simulated local adapter failure&quot;
+    },
+    {
+      &quot;scenario&quot;: &quot;repeat_request&quot;,
+      &quot;passed&quot;: true,
+      &quot;error&quot;: null,
+      &quot;inspection&quot;: {
+        &quot;proposal_id&quot;: &quot;ab148d8d-1c0b-4fab-b6d3-093f03b1de70&quot;,
+        &quot;request_id&quot;: &quot;acceptance-repeat_request&quot;,
+        &quot;action_type&quot;: &quot;desk_ticket&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+        &quot;payload&quot;: {
+          &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+          &quot;customer_id&quot;: &quot;C01&quot;,
+          &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+          &quot;draft_source_ids&quot;: [
+            &quot;S01&quot;
+          ],
+          &quot;language&quot;: &quot;en&quot;,
+          &quot;message_id&quot;: &quot;S01&quot;,
+          &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+          &quot;priority&quot;: &quot;High&quot;,
+          &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+          &quot;source_ids&quot;: [
+            &quot;S01&quot;,
+            &quot;P02&quot;
+          ]
+        },
+        &quot;decision&quot;: null
+      },
+      &quot;outcome&quot;: {
+        &quot;proposal_id&quot;: &quot;ab148d8d-1c0b-4fab-b6d3-093f03b1de70&quot;,
+        &quot;outcome&quot;: &quot;not_executed&quot;,
+        &quot;action&quot;: null,
+        &quot;attempt_history&quot;: []
+      },
+      &quot;stored_action_count&quot;: 0,
+      &quot;mode&quot;: &quot;real draft, controlled reviewer operation&quot;
+    },
+    {
+      &quot;scenario&quot;: &quot;model_unavailable&quot;,
+      &quot;passed&quot;: true,
+      &quot;mode&quot;: &quot;deliberate unavailable local endpoint, not a real model generation&quot;,
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;acceptance-model-unavailable&quot;,
+        &quot;department&quot;: &quot;unrouted&quot;,
+        &quot;result&quot;: &quot;Local model is unavailable or timed out.&quot;,
+        &quot;sources&quot;: [],
+        &quot;missing_information&quot;: [
+          &quot;local model&quot;
+        ],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;model_unavailable&quot;
+      }
+    },
+    {
+      &quot;scenario&quot;: &quot;missing_source&quot;,
+      &quot;passed&quot;: true,
+      &quot;mode&quot;: &quot;real interpretation, deliberately empty fixture directory&quot;,
+      &quot;response&quot;: {
+        &quot;request_id&quot;: &quot;acceptance-missing-source&quot;,
+        &quot;department&quot;: &quot;marketing&quot;,
+        &quot;result&quot;: &quot;The authorized source leads is unavailable or invalid.&quot;,
+        &quot;sources&quot;: [],
+        &quot;missing_information&quot;: [
+          &quot;authorized local source&quot;
+        ],
+        &quot;proposed_action&quot;: null,
+        &quot;action_status&quot;: &quot;source_unavailable&quot;
+      }
+    }
+  ],
+  &quot;history&quot;: [
+    {
+      &quot;request_id&quot;: &quot;demo-0&quot;,
+      &quot;actor_id&quot;: &quot;demo-marketing&quot;,
+      &quot;actor_role&quot;: &quot;marketing&quot;,
+      &quot;route&quot;: &quot;marketing&quot;,
+      &quot;status&quot;: &quot;complete&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:49:58.180237+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;P01\&quot;,\&quot;P02\&quot;,\&quot;P03\&quot;,\&quot;L01\&quot;,\&quot;L02\&quot;,\&quot;L03\&quot;,\&quot;L04\&quot;,\&quot;L05\&quot;,\&quot;L06\&quot;,\&quot;L07\&quot;,\&quot;L08\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-1&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;pending_approval&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:01.415968+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S01\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: [
+        {
+          &quot;proposal_id&quot;: &quot;4275a5d6-6078-4f61-b956-980d5ef33add&quot;,
+          &quot;request_id&quot;: &quot;demo-1&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;status&quot;: &quot;succeeded&quot;,
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ],
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;decision&quot;: {
+            &quot;approval_id&quot;: &quot;8eab3e35-371e-4788-a35e-cb10c35da139&quot;,
+            &quot;decision&quot;: &quot;approved&quot;,
+            &quot;reviewer_role&quot;: &quot;ops_reviewer&quot;,
+            &quot;reviewer_actor_id&quot;: &quot;demo-reviewer&quot;,
+            &quot;decided_at&quot;: &quot;2026-10-05T18:50:14.263959+00:00&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-2&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;pending_approval&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:02.575529+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S02\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: [
+        {
+          &quot;proposal_id&quot;: &quot;14fb7694-0d34-4010-8a35-408b3a507e2f&quot;,
+          &quot;request_id&quot;: &quot;demo-2&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;status&quot;: &quot;succeeded&quot;,
+          &quot;payload_hash&quot;: &quot;2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;access request&quot;,
+            &quot;customer_id&quot;: &quot;C05&quot;,
+            &quot;draft&quot;: &quot;شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S02&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;language&quot;: &quot;ar&quot;,
+            &quot;message_id&quot;: &quot;S02&quot;,
+            &quot;message_text&quot;: &quot;لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟&quot;,
+            &quot;priority&quot;: &quot;Normal&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: ordinary account-access requests are Normal priority.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S02&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;decision&quot;: {
+            &quot;approval_id&quot;: &quot;ea2f58b2-39e3-4cf8-827a-9a48bde7f3a6&quot;,
+            &quot;decision&quot;: &quot;approved&quot;,
+            &quot;reviewer_role&quot;: &quot;ops_reviewer&quot;,
+            &quot;reviewer_actor_id&quot;: &quot;demo-reviewer&quot;,
+            &quot;decided_at&quot;: &quot;2026-10-05T18:50:14.274671+00:00&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-3&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;needs_information&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:03.728650+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S03\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-4&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;blocked&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:04.141921+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S04\&quot;,\&quot;P03\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-5&quot;,
+      &quot;actor_id&quot;: &quot;demo-product&quot;,
+      &quot;actor_role&quot;: &quot;product&quot;,
+      &quot;route&quot;: &quot;product&quot;,
+      &quot;status&quot;: &quot;draft&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:04.538848+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;P01\&quot;,\&quot;P02\&quot;,\&quot;P03\&quot;,\&quot;F01\&quot;,\&quot;F02\&quot;,\&quot;F03\&quot;,\&quot;F04\&quot;,\&quot;F05\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-6&quot;,
+      &quot;actor_id&quot;: &quot;demo-tech&quot;,
+      &quot;actor_role&quot;: &quot;tech&quot;,
+      &quot;route&quot;: &quot;tech&quot;,
+      &quot;status&quot;: &quot;pending_approval&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:07.531949+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;I01\&quot;,\&quot;I02\&quot;,\&quot;I03\&quot;,\&quot;I04\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: [
+        {
+          &quot;proposal_id&quot;: &quot;d32eceb6-0f74-4db2-90fa-fbb6cb276863&quot;,
+          &quot;request_id&quot;: &quot;demo-6&quot;,
+          &quot;action_type&quot;: &quot;incident_task&quot;,
+          &quot;status&quot;: &quot;succeeded&quot;,
+          &quot;payload_hash&quot;: &quot;56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc&quot;,
+          &quot;payload&quot;: {
+            &quot;draft_note&quot;: &quot;Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;
+            ],
+            &quot;hypotheses&quot;: [
+              &quot;A timeout on the same request may be related; shared request IDs do not prove causation.&quot;
+            ],
+            &quot;next_step&quot;: &quot;Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.&quot;,
+            &quot;observed_facts&quot;: [
+              &quot;I01: lead_intake reported HTTP 500 for R101&quot;,
+              &quot;I02: crm_mock reported timeout for R101&quot;,
+              &quot;I03: lead_intake reported HTTP 500 for R102&quot;,
+              &quot;I04: lead_intake reported HTTP 200 for R103&quot;
+            ],
+            &quot;recovery_assessment&quot;: &quot;A later successful request does not prove complete recovery: I04&quot;,
+            &quot;severity&quot;: &quot;High&quot;,
+            &quot;severity_rationale&quot;: &quot;P02: repeated lead-intake server errors require High priority.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;I01&quot;,
+              &quot;I02&quot;,
+              &quot;I03&quot;,
+              &quot;I04&quot;,
+              &quot;P02&quot;
+            ],
+            &quot;title&quot;: &quot;Investigate evidenced service failures&quot;
+          },
+          &quot;decision&quot;: {
+            &quot;approval_id&quot;: &quot;e50983e6-10a9-4135-ac08-26127d3a67c7&quot;,
+            &quot;decision&quot;: &quot;approved&quot;,
+            &quot;reviewer_role&quot;: &quot;ops_reviewer&quot;,
+            &quot;reviewer_actor_id&quot;: &quot;demo-reviewer&quot;,
+            &quot;decided_at&quot;: &quot;2026-10-05T18:50:14.292746+00:00&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-7&quot;,
+      &quot;actor_id&quot;: &quot;demo-marketing&quot;,
+      &quot;actor_role&quot;: &quot;marketing&quot;,
+      &quot;route&quot;: &quot;restricted&quot;,
+      &quot;status&quot;: &quot;denied&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:10.392584+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;P03\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-8&quot;,
+      &quot;actor_id&quot;: &quot;demo-marketing&quot;,
+      &quot;actor_role&quot;: &quot;marketing&quot;,
+      &quot;route&quot;: &quot;unrouted&quot;,
+      &quot;status&quot;: &quot;blocked&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:10.403633+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;P01\&quot;,\&quot;P03\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-9&quot;,
+      &quot;actor_id&quot;: &quot;demo-tech&quot;,
+      &quot;actor_role&quot;: &quot;tech&quot;,
+      &quot;route&quot;: &quot;restricted&quot;,
+      &quot;status&quot;: &quot;denied&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:10.413229+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;P03\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-10&quot;,
+      &quot;actor_id&quot;: &quot;demo-marketing&quot;,
+      &quot;actor_role&quot;: &quot;marketing&quot;,
+      &quot;route&quot;: &quot;marketing&quot;,
+      &quot;status&quot;: &quot;complete&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:10.420596+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;P01\&quot;,\&quot;P02\&quot;,\&quot;P03\&quot;,\&quot;L01\&quot;,\&quot;L02\&quot;,\&quot;L03\&quot;,\&quot;L04\&quot;,\&quot;L05\&quot;,\&quot;L06\&quot;,\&quot;L07\&quot;,\&quot;L08\&quot;]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;demo-11&quot;,
+      &quot;actor_id&quot;: &quot;demo-marketing&quot;,
+      &quot;actor_role&quot;: &quot;marketing&quot;,
+      &quot;route&quot;: &quot;unrouted&quot;,
+      &quot;status&quot;: &quot;needs_clarification&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:13.654206+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;acceptance-rejected&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;pending_approval&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:14.302686+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S01\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: [
+        {
+          &quot;proposal_id&quot;: &quot;ebeb8205-ce59-41a1-a351-5072fb685c14&quot;,
+          &quot;request_id&quot;: &quot;acceptance-rejected&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;status&quot;: &quot;rejected&quot;,
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ],
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;decision&quot;: {
+            &quot;approval_id&quot;: &quot;fd8ad7d7-b4c9-48e4-ba82-7f46dbb73e64&quot;,
+            &quot;decision&quot;: &quot;rejected&quot;,
+            &quot;reviewer_role&quot;: &quot;ops_reviewer&quot;,
+            &quot;reviewer_actor_id&quot;: &quot;demo-reviewer&quot;,
+            &quot;decided_at&quot;: &quot;2026-10-05T18:50:15.380998+00:00&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;request_id&quot;: &quot;acceptance-edited_hash&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;pending_approval&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:15.382983+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S01\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: [
+        {
+          &quot;proposal_id&quot;: &quot;02a5d0f1-7334-42ef-b8c6-d056b827bb92&quot;,
+          &quot;request_id&quot;: &quot;acceptance-edited_hash&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ],
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;decision&quot;: null
+        }
+      ]
+    },
+    {
+      &quot;request_id&quot;: &quot;acceptance-always_fail&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;pending_approval&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:16.472552+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S01\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: [
+        {
+          &quot;proposal_id&quot;: &quot;7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1&quot;,
+          &quot;request_id&quot;: &quot;acceptance-always_fail&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;status&quot;: &quot;failed&quot;,
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ],
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;decision&quot;: {
+            &quot;approval_id&quot;: &quot;dddded73-6ed0-4481-a47b-cde8d5dba524&quot;,
+            &quot;decision&quot;: &quot;approved&quot;,
+            &quot;reviewer_role&quot;: &quot;ops_reviewer&quot;,
+            &quot;reviewer_actor_id&quot;: &quot;demo-reviewer&quot;,
+            &quot;decided_at&quot;: &quot;2026-10-05T18:50:17.542566+00:00&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;request_id&quot;: &quot;acceptance-repeat_request&quot;,
+      &quot;actor_id&quot;: &quot;demo-customer_service&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;customer_service&quot;,
+      &quot;status&quot;: &quot;pending_approval&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:17.546481+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[\&quot;S01\&quot;,\&quot;P02\&quot;]&quot;,
+      &quot;proposals&quot;: [
+        {
+          &quot;proposal_id&quot;: &quot;ab148d8d-1c0b-4fab-b6d3-093f03b1de70&quot;,
+          &quot;request_id&quot;: &quot;acceptance-repeat_request&quot;,
+          &quot;action_type&quot;: &quot;desk_ticket&quot;,
+          &quot;status&quot;: &quot;pending&quot;,
+          &quot;payload_hash&quot;: &quot;88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba&quot;,
+          &quot;payload&quot;: {
+            &quot;classification&quot;: &quot;payment confirmation missing&quot;,
+            &quot;customer_id&quot;: &quot;C01&quot;,
+            &quot;draft&quot;: &quot;Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.&quot;,
+            &quot;draft_source_ids&quot;: [
+              &quot;S01&quot;
+            ],
+            &quot;language&quot;: &quot;en&quot;,
+            &quot;message_id&quot;: &quot;S01&quot;,
+            &quot;message_text&quot;: &quot;My payment was successful, but I cannot see the confirmation in my account.&quot;,
+            &quot;priority&quot;: &quot;High&quot;,
+            &quot;priority_rationale&quot;: &quot;P02: reported successful payment with missing confirmation requires human investigation.&quot;,
+            &quot;source_ids&quot;: [
+              &quot;S01&quot;,
+              &quot;P02&quot;
+            ]
+          },
+          &quot;decision&quot;: null
+        }
+      ]
+    },
+    {
+      &quot;request_id&quot;: &quot;acceptance-model-unavailable&quot;,
+      &quot;actor_id&quot;: &quot;customer_service-test&quot;,
+      &quot;actor_role&quot;: &quot;customer_service&quot;,
+      &quot;route&quot;: &quot;unrouted&quot;,
+      &quot;status&quot;: &quot;model_unavailable&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:18.623766+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[]&quot;,
+      &quot;proposals&quot;: []
+    },
+    {
+      &quot;request_id&quot;: &quot;acceptance-missing-source&quot;,
+      &quot;actor_id&quot;: &quot;marketing-test&quot;,
+      &quot;actor_role&quot;: &quot;marketing&quot;,
+      &quot;route&quot;: &quot;marketing&quot;,
+      &quot;status&quot;: &quot;source_unavailable&quot;,
+      &quot;created_at&quot;: &quot;2026-10-05T18:50:18.633158+00:00&quot;,
+      &quot;source_ids_json&quot;: &quot;[]&quot;,
+      &quot;proposals&quot;: []
+    }
+  ]
+}</pre>

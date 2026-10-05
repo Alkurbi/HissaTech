@@ -1,0 +1,7 @@
+[
+  {"id":"F01","text":"C01: Payment confirmation is missing after a successful payment."},
+  {"id":"F02","text":"C03: I cannot tell whether my payment was confirmed."},
+  {"id":"F03","text":"C05: Login recovery is confusing."},
+  {"id":"F04","text":"C06: The Prime lead form is hard to complete on mobile."},
+  {"id":"F05","text":"C07: Add a fractional ownership resale feature."}
+]

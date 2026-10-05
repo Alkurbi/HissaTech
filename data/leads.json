@@ -1,0 +1,10 @@
+[
+  {"row_id":"L01","contact_id":"C01","source":"Paid Search","status":"Qualified","budget_sar":2000000},
+  {"row_id":"L02","contact_id":"C02","source":"Social","status":"New","budget_sar":1000000},
+  {"row_id":"L03","contact_id":"C03","source":"Referral","status":"Qualified","budget_sar":5000000},
+  {"row_id":"L04","contact_id":"C02","source":"Social","status":"New","budget_sar":1000000},
+  {"row_id":"L05","contact_id":"C04","source":"Paid Search","status":"Unqualified","budget_sar":200000},
+  {"row_id":"L06","contact_id":"C05","source":"Organic","status":"Qualified","budget_sar":1500000},
+  {"row_id":"L07","contact_id":"C06","source":"Social","status":"Contacted","budget_sar":null},
+  {"row_id":"L08","contact_id":"C07","source":null,"status":"New","budget_sar":null}
+]

@@ -1,0 +1,1 @@
+"""HissaTech local assessment prototype."""

@@ -1,0 +1,1855 @@
+{
+  "created_at": "2026-10-05T18:50:19.035283+00:00",
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "model_metadata": {
+    "model": "mistral-nemo:latest",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "llama",
+      "families": [
+        "llama"
+      ],
+      "parameter_size": "12.2B",
+      "quantization_level": "Q4_0"
+    },
+    "model_info": {
+      "general.architecture": "llama",
+      "general.basename": "Mistral-Nemo",
+      "general.file_type": 2,
+      "general.finetune": "Instruct",
+      "general.languages": null,
+      "general.license": "apache-2.0",
+      "general.parameter_count": 12247782400,
+      "general.quantization_version": 2,
+      "general.size_label": "12B",
+      "general.type": "model",
+      "general.version": "2407",
+      "llama.attention.head_count": 32,
+      "llama.attention.head_count_kv": 8,
+      "llama.attention.key_length": 128,
+      "llama.attention.layer_norm_rms_epsilon": 1e-05,
+      "llama.attention.value_length": 128,
+      "llama.block_count": 40,
+      "llama.context_length": 1024000,
+      "llama.embedding_length": 5120,
+      "llama.feed_forward_length": 14336,
+      "llama.rope.dimension_count": 128,
+      "llama.rope.freq_base": 1000000,
+      "llama.vocab_size": 131072,
+      "tokenizer.ggml.add_bos_token": true,
+      "tokenizer.ggml.add_eos_token": false,
+      "tokenizer.ggml.add_space_prefix": false,
+      "tokenizer.ggml.bos_token_id": 1,
+      "tokenizer.ggml.eos_token_id": 2,
+      "tokenizer.ggml.merges": null,
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.pre": "tekken",
+      "tokenizer.ggml.token_type": null,
+      "tokenizer.ggml.tokens": null,
+      "tokenizer.ggml.unknown_token_id": 0
+    },
+    "license_name": "                                 Apache License"
+  },
+  "offline_verification": "operator-attested disconnected; not independently verified",
+  "scope": "Real local inference, fictional fixtures, local mock actions only. Narrative quality needs human review.",
+  "routing_checks": [
+    {
+      "request": "how many leads",
+      "expected_department": "marketing",
+      "interpretation": {
+        "department": "marketing",
+        "clarification": null
+      },
+      "passed": true
+    },
+    {
+      "request": "how many duplicates leads",
+      "expected_department": "marketing",
+      "interpretation": {
+        "department": "marketing",
+        "clarification": null
+      },
+      "passed": true
+    },
+    {
+      "request": "Can you deal with this problem?",
+      "expected_department": null,
+      "interpretation": {
+        "department": null,
+        "clarification": "Could you please specify the nature of the problem?"
+      },
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "role": "marketing",
+      "request": "summarize Prime lead performance",
+      "total_seconds": 3.235,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.3797
+        },
+        {
+          "task": "DRAFT",
+          "seconds": 2.8311
+        }
+      ],
+      "response": {
+        "request_id": "demo-0",
+        "department": "marketing",
+        "result": {
+          "unique_leads": 7,
+          "qualified_leads": 3,
+          "duplicates": [
+            "L04"
+          ],
+          "duplicate_conflicts": [],
+          "duplicate_resolution": "Retain the first import per contact ID. Metrics are provisional when duplicate conflicts exist.",
+          "status_counts": {
+            "Qualified": 3,
+            "New": 2,
+            "Unqualified": 1,
+            "Contacted": 1
+          },
+          "missing_budget_count": 2,
+          "missing_source_count": 1,
+          "by_source": {
+            "Paid Search": {
+              "unique_leads": 2,
+              "qualified_leads": 1,
+              "status_counts": {
+                "Qualified": 1,
+                "Unqualified": 1
+              },
+              "spend_sar": 1200,
+              "qualification_rate": 0.5,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": 600.0
+            },
+            "Social": {
+              "unique_leads": 2,
+              "qualified_leads": 0,
+              "status_counts": {
+                "New": 1,
+                "Contacted": 1
+              },
+              "spend_sar": 800,
+              "qualification_rate": 0.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": 400.0
+            },
+            "Referral": {
+              "unique_leads": 1,
+              "qualified_leads": 1,
+              "status_counts": {
+                "Qualified": 1
+              },
+              "spend_sar": null,
+              "qualification_rate": 1.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": null
+            },
+            "Organic": {
+              "unique_leads": 1,
+              "qualified_leads": 1,
+              "status_counts": {
+                "Qualified": 1
+              },
+              "spend_sar": null,
+              "qualification_rate": 1.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": null
+            },
+            "Unknown": {
+              "unique_leads": 1,
+              "qualified_leads": 0,
+              "status_counts": {
+                "New": 1
+              },
+              "spend_sar": null,
+              "qualification_rate": 0.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": null
+            }
+          },
+          "qualification_rate": 0.42857142857142855,
+          "qualification_rate_denominator": "qualified leads / unique leads, deduplicated by contact ID",
+          "management_summary": "Here's a summary of lead metrics:\n\n- Total unique leads: 7\n- Qualified leads: 3 (42.86% qualification rate)\n- Duplicate leads: L04\n\nBy source:\n\n- Paid Search: 2 unique leads, 1 qualified (50% qualification rate), SAR 1200 spend, SAR 600 cost per unique lead\n- Social: 2 unique leads, 0 qualified (0% qualification rate), SAR 800 spend, SAR 400 cost per unique lead\n- Referral & Organic: Both had 1 unique and qualified lead each, with unknown spend\n- Unknown source: 1 unique lead, 0 qualified\n\nUnknowns: Spend for Referral, Organic, and Unknown sources; budgets for 2 leads.",
+          "draft_source_ids": [
+            "P01",
+            "L01"
+          ],
+          "recommendations": [
+            "Review Qualified leads for follow-up through approved channels; this analysis contacts nobody.",
+            "Complete unknown source, budget, and spend data before reallocating spend."
+          ],
+          "recommendation_source_ids": [
+            [
+              "P03",
+              "L01",
+              "L02",
+              "L03",
+              "L04",
+              "L05",
+              "L06",
+              "L07",
+              "L08"
+            ],
+            [
+              "P01",
+              "L01",
+              "L02",
+              "L03",
+              "L04",
+              "L05",
+              "L06",
+              "L07",
+              "L08"
+            ]
+          ]
+        },
+        "sources": [
+          "P01",
+          "P02",
+          "P03",
+          "L01",
+          "L02",
+          "L03",
+          "L04",
+          "L05",
+          "L06",
+          "L07",
+          "L08"
+        ],
+        "missing_information": [
+          "No sale or investment conversion data is available.",
+          "Referral spend is unknown, not zero.",
+          "Organic spend is unknown, not zero.",
+          "Unknown spend is unknown, not zero.",
+          "1 unique lead(s) have an unknown source.",
+          "2 unique lead(s) have unknown budgets."
+        ],
+        "proposed_action": null,
+        "action_status": "complete"
+      }
+    },
+    {
+      "role": "customer_service",
+      "request": "draft a ticket for S01",
+      "total_seconds": 1.1588,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.4385
+        },
+        {
+          "task": "DRAFT",
+          "seconds": 0.7106
+        }
+      ],
+      "response": {
+        "request_id": "demo-1",
+        "department": "customer_service",
+        "result": {
+          "classification": "payment confirmation missing",
+          "priority": "High",
+          "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+          "draft_response": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+          "draft_source_ids": [
+            "S01"
+          ]
+        },
+        "sources": [
+          "S01",
+          "P02"
+        ],
+        "missing_information": [],
+        "proposed_action": {
+          "proposal_id": "4275a5d6-6078-4f61-b956-980d5ef33add",
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+          "status": "pending",
+          "action_type": "desk_ticket",
+          "payload": {
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "customer_id": "C01",
+            "language": "en",
+            "classification": "payment confirmation missing",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ],
+            "draft_source_ids": [
+              "S01"
+            ]
+          }
+        },
+        "action_status": "pending_approval"
+      }
+    },
+    {
+      "role": "customer_service",
+      "request": "answer S02 in Arabic",
+      "total_seconds": 1.1525,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.3836
+        },
+        {
+          "task": "DRAFT",
+          "seconds": 0.7496
+        }
+      ],
+      "response": {
+        "request_id": "demo-2",
+        "department": "customer_service",
+        "result": {
+          "classification": "access request",
+          "priority": "Normal",
+          "priority_rationale": "P02: ordinary account-access requests are Normal priority.",
+          "draft_response": "شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.",
+          "draft_source_ids": [
+            "S02",
+            "P02"
+          ]
+        },
+        "sources": [
+          "S02",
+          "P02"
+        ],
+        "missing_information": [],
+        "proposed_action": {
+          "proposal_id": "14fb7694-0d34-4010-8a35-408b3a507e2f",
+          "payload_hash": "2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42",
+          "status": "pending",
+          "action_type": "desk_ticket",
+          "payload": {
+            "message_id": "S02",
+            "message_text": "لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟",
+            "customer_id": "C05",
+            "language": "ar",
+            "classification": "access request",
+            "priority": "Normal",
+            "priority_rationale": "P02: ordinary account-access requests are Normal priority.",
+            "draft": "شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.",
+            "source_ids": [
+              "S02",
+              "P02"
+            ],
+            "draft_source_ids": [
+              "S02",
+              "P02"
+            ]
+          }
+        },
+        "action_status": "pending_approval"
+      }
+    },
+    {
+      "role": "customer_service",
+      "request": "draft a ticket for S03",
+      "total_seconds": 0.4127,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.4025
+        }
+      ],
+      "response": {
+        "request_id": "demo-3",
+        "department": "customer_service",
+        "result": {
+          "clarification": "Please provide the customer ID needed to locate the account. No identity was invented.",
+          "classification": "information request",
+          "priority": "Normal",
+          "priority_rationale": "P02: no evidenced successful-payment/missing-confirmation report; ordinary enquiries are Normal."
+        },
+        "sources": [
+          "S03",
+          "P02"
+        ],
+        "missing_information": [
+          "customer identity"
+        ],
+        "proposed_action": null,
+        "action_status": "needs_information"
+      }
+    },
+    {
+      "role": "customer_service",
+      "request": "process S04",
+      "total_seconds": 0.3962,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.382
+        }
+      ],
+      "response": {
+        "request_id": "demo-4",
+        "department": "customer_service",
+        "result": "The source contains restricted content or untrusted instructions. No authority or action changed.",
+        "sources": [
+          "S04",
+          "P03"
+        ],
+        "missing_information": [],
+        "proposed_action": null,
+        "action_status": "blocked"
+      }
+    },
+    {
+      "role": "product",
+      "request": "prioritize the product feedback",
+      "total_seconds": 2.9923,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.346
+        },
+        {
+          "task": "DRAFT",
+          "seconds": 2.6276
+        }
+      ],
+      "response": {
+        "request_id": "demo-5",
+        "department": "product",
+        "result": {
+          "themes": [
+            {
+              "theme": "payment confirmation",
+              "evidence_ids": [
+                "F01",
+                "F02"
+              ],
+              "record_count": 2,
+              "problem_statement": "Investigate reported payment-confirmation uncertainty.",
+              "acceptance_criteria": "Given a successful test payment, its confirmation state is visible; a missing state shows an investigation path.",
+              "priority": "High",
+              "priority_rationale": "P02 prioritizes credible successful-payment reports with missing confirmation, not feedback frequency.",
+              "implementation_dependencies": [
+                "Reproduce reported confirmation gaps with authorized test-payment records.",
+                "Inspect the payment-to-confirmation flow; backend behavior and ownership are unknown."
+              ],
+              "dependency_status": "Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown."
+            },
+            {
+              "theme": "login recovery",
+              "evidence_ids": [
+                "F03"
+              ],
+              "record_count": 1,
+              "problem_statement": "Investigate reported account-recovery friction.",
+              "acceptance_criteria": "Given a test account, a user completes the documented recovery flow and signs in without unexplained steps.",
+              "priority": "Normal",
+              "priority_rationale": "Account-access friction affects usability; incident severity is not established by feedback count.",
+              "implementation_dependencies": [
+                "Document the existing recovery flow using authorized test accounts.",
+                "Review authentication behavior and account-recovery requirements with the responsible team."
+              ],
+              "dependency_status": "Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown."
+            },
+            {
+              "theme": "mobile lead form",
+              "evidence_ids": [
+                "F04"
+              ],
+              "record_count": 1,
+              "problem_statement": "Investigate reported mobile lead-form friction.",
+              "acceptance_criteria": "At a 360-pixel viewport, required fields and validation remain visible and a valid test submission completes.",
+              "priority": "Normal",
+              "priority_rationale": "Mobile intake usability needs investigation; frequency alone does not establish incident severity.",
+              "implementation_dependencies": [
+                "Reproduce the reported friction at a 360-pixel viewport.",
+                "Inspect form validation and submission behavior using test data before choosing changes."
+              ],
+              "dependency_status": "Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown."
+            },
+            {
+              "theme": "fractional ownership research",
+              "evidence_ids": [
+                "F05"
+              ],
+              "record_count": 1,
+              "problem_statement": "Investigate fractional resale feedback internally.",
+              "acceptance_criteria": "Research records constraints and open questions without a release, transaction, or regulatory approval claim.",
+              "priority": "Low",
+              "priority_rationale": "P01 permits internal research only; commercial execution remains paused.",
+              "implementation_dependencies": [
+                "Review P01 constraints before internal research; commercial execution remains paused.",
+                "Investigate resale feasibility and unresolved regulatory questions; no approval or release is confirmed."
+              ],
+              "dependency_status": "Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown."
+            }
+          ],
+          "unclassified_feedback_ids": [],
+          "top_three_backlog_items": [
+            {
+              "theme": "payment confirmation",
+              "evidence_ids": [
+                "F01",
+                "F02"
+              ],
+              "record_count": 2,
+              "problem_statement": "Investigate reported payment-confirmation uncertainty.",
+              "acceptance_criteria": "Given a successful test payment, its confirmation state is visible; a missing state shows an investigation path.",
+              "priority": "High",
+              "priority_rationale": "P02 prioritizes credible successful-payment reports with missing confirmation, not feedback frequency.",
+              "implementation_dependencies": [
+                "Reproduce reported confirmation gaps with authorized test-payment records.",
+                "Inspect the payment-to-confirmation flow; backend behavior and ownership are unknown."
+              ],
+              "dependency_status": "Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown."
+            },
+            {
+              "theme": "login recovery",
+              "evidence_ids": [
+                "F03"
+              ],
+              "record_count": 1,
+              "problem_statement": "Investigate reported account-recovery friction.",
+              "acceptance_criteria": "Given a test account, a user completes the documented recovery flow and signs in without unexplained steps.",
+              "priority": "Normal",
+              "priority_rationale": "Account-access friction affects usability; incident severity is not established by feedback count.",
+              "implementation_dependencies": [
+                "Document the existing recovery flow using authorized test accounts.",
+                "Review authentication behavior and account-recovery requirements with the responsible team."
+              ],
+              "dependency_status": "Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown."
+            },
+            {
+              "theme": "mobile lead form",
+              "evidence_ids": [
+                "F04"
+              ],
+              "record_count": 1,
+              "problem_statement": "Investigate reported mobile lead-form friction.",
+              "acceptance_criteria": "At a 360-pixel viewport, required fields and validation remain visible and a valid test submission completes.",
+              "priority": "Normal",
+              "priority_rationale": "Mobile intake usability needs investigation; frequency alone does not establish incident severity.",
+              "implementation_dependencies": [
+                "Reproduce the reported friction at a 360-pixel viewport.",
+                "Inspect form validation and submission behavior using test data before choosing changes."
+              ],
+              "dependency_status": "Investigation prerequisites, not verified implementation facts; owners, feasibility, approvals and dates are unknown."
+            }
+          ],
+          "priority_rationale": "The backlog themes are as follows, in order of priority:\n\n**High Priority:**\n- **Payment Confirmation (F01, F02)**: Investigate reported payment confirmation uncertainty. Given a successful test payment, its confirmation state must be visible; a missing state should show an investigation path.\n\n**Normal Priority:**\n- **Login Recovery (F03)**: Investigate reported account recovery friction. A user should complete the documented recovery flow and sign in without unexplained steps.\n- **Mobile Lead Form (F04)**: Investigate reported mobile lead form friction. At a 360-pixel viewport, required fields and validation must remain visible, and a valid test submission should complete.",
+          "draft_source_ids": [
+            "P02",
+            "F01",
+            "F02",
+            "F03",
+            "F04"
+          ]
+        },
+        "sources": [
+          "P01",
+          "P02",
+          "P03",
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F05"
+        ],
+        "missing_information": [
+          "Incident severity is not established by feedback frequency."
+        ],
+        "proposed_action": null,
+        "action_status": "draft"
+      }
+    },
+    {
+      "role": "tech",
+      "request": "triage the intake failures",
+      "total_seconds": 2.8599,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.395
+        },
+        {
+          "task": "DRAFT",
+          "seconds": 2.4428
+        }
+      ],
+      "response": {
+        "request_id": "demo-6",
+        "department": "tech",
+        "result": {
+          "severity": "High",
+          "severity_rationale": "P02: repeated lead-intake server errors require High priority.",
+          "observed_facts": [
+            "I01: lead_intake reported HTTP 500 for R101",
+            "I02: crm_mock reported timeout for R101",
+            "I03: lead_intake reported HTTP 500 for R102",
+            "I04: lead_intake reported HTTP 200 for R103"
+          ],
+          "hypotheses": [
+            "A timeout on the same request may be related; shared request IDs do not prove causation."
+          ],
+          "recovery_assessment": "A later successful request does not prove complete recovery: I04",
+          "next_diagnostic_step": "Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.",
+          "draft_note": "Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.",
+          "draft_source_ids": [
+            "I01",
+            "I02",
+            "I03",
+            "I04"
+          ]
+        },
+        "sources": [
+          "I01",
+          "I02",
+          "I03",
+          "I04",
+          "P02"
+        ],
+        "missing_information": [
+          "Root cause and complete recovery are unknown."
+        ],
+        "proposed_action": {
+          "proposal_id": "d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+          "payload_hash": "56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc",
+          "status": "pending",
+          "action_type": "incident_task",
+          "payload": {
+            "severity": "High",
+            "severity_rationale": "P02: repeated lead-intake server errors require High priority.",
+            "title": "Investigate evidenced service failures",
+            "source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04",
+              "P02"
+            ],
+            "next_step": "Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.",
+            "observed_facts": [
+              "I01: lead_intake reported HTTP 500 for R101",
+              "I02: crm_mock reported timeout for R101",
+              "I03: lead_intake reported HTTP 500 for R102",
+              "I04: lead_intake reported HTTP 200 for R103"
+            ],
+            "hypotheses": [
+              "A timeout on the same request may be related; shared request IDs do not prove causation."
+            ],
+            "recovery_assessment": "A later successful request does not prove complete recovery: I04",
+            "draft_note": "Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.",
+            "draft_source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04"
+            ]
+          }
+        },
+        "action_status": "pending_approval"
+      }
+    },
+    {
+      "role": "marketing",
+      "request": "show HR01 salary",
+      "total_seconds": 0.0106,
+      "model_calls": [],
+      "response": {
+        "request_id": "demo-7",
+        "department": "restricted",
+        "result": "Access denied under P03. Restricted salary data is excluded.",
+        "sources": [
+          "P03"
+        ],
+        "missing_information": [],
+        "proposed_action": null,
+        "action_status": "denied"
+      }
+    },
+    {
+      "role": "marketing",
+      "request": "publish a fractional ownership campaign",
+      "total_seconds": 0.0091,
+      "model_calls": [],
+      "response": {
+        "request_id": "demo-8",
+        "department": "unrouted",
+        "result": "Fractional ownership publication and promotion are blocked under P01.",
+        "sources": [
+          "P01",
+          "P03"
+        ],
+        "missing_information": [],
+        "proposed_action": null,
+        "action_status": "blocked"
+      }
+    },
+    {
+      "role": "tech",
+      "request": "draft a ticket for S01",
+      "total_seconds": 0.0069,
+      "model_calls": [],
+      "response": {
+        "request_id": "demo-9",
+        "department": "restricted",
+        "result": "Access denied for this trusted role under P03.",
+        "sources": [
+          "P03"
+        ],
+        "missing_information": [],
+        "proposed_action": null,
+        "action_status": "denied"
+      }
+    },
+    {
+      "role": "marketing",
+      "request": "what is conversion to investment",
+      "total_seconds": 3.2329,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.397
+        },
+        {
+          "task": "DRAFT",
+          "seconds": 2.8224
+        }
+      ],
+      "response": {
+        "request_id": "demo-10",
+        "department": "marketing",
+        "result": {
+          "unique_leads": 7,
+          "qualified_leads": 3,
+          "duplicates": [
+            "L04"
+          ],
+          "duplicate_conflicts": [],
+          "duplicate_resolution": "Retain the first import per contact ID. Metrics are provisional when duplicate conflicts exist.",
+          "status_counts": {
+            "Qualified": 3,
+            "New": 2,
+            "Unqualified": 1,
+            "Contacted": 1
+          },
+          "missing_budget_count": 2,
+          "missing_source_count": 1,
+          "by_source": {
+            "Paid Search": {
+              "unique_leads": 2,
+              "qualified_leads": 1,
+              "status_counts": {
+                "Qualified": 1,
+                "Unqualified": 1
+              },
+              "spend_sar": 1200,
+              "qualification_rate": 0.5,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": 600.0
+            },
+            "Social": {
+              "unique_leads": 2,
+              "qualified_leads": 0,
+              "status_counts": {
+                "New": 1,
+                "Contacted": 1
+              },
+              "spend_sar": 800,
+              "qualification_rate": 0.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": 400.0
+            },
+            "Referral": {
+              "unique_leads": 1,
+              "qualified_leads": 1,
+              "status_counts": {
+                "Qualified": 1
+              },
+              "spend_sar": null,
+              "qualification_rate": 1.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": null
+            },
+            "Organic": {
+              "unique_leads": 1,
+              "qualified_leads": 1,
+              "status_counts": {
+                "Qualified": 1
+              },
+              "spend_sar": null,
+              "qualification_rate": 1.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": null
+            },
+            "Unknown": {
+              "unique_leads": 1,
+              "qualified_leads": 0,
+              "status_counts": {
+                "New": 1
+              },
+              "spend_sar": null,
+              "qualification_rate": 0.0,
+              "qualification_rate_denominator": "qualified leads / unique leads for this source, deduplicated by contact ID",
+              "cost_denominator": "source spend / unique leads for this source, deduplicated by contact ID; not cost per investor",
+              "cost_per_unique_lead_sar": null
+            }
+          },
+          "qualification_rate": 0.42857142857142855,
+          "qualification_rate_denominator": "qualified leads / unique leads, deduplicated by contact ID",
+          "management_summary": "Here's a summary of lead metrics:\n\n- Total unique leads: 7\n- Qualified leads: 3 (42.86% qualification rate)\n- Duplicate leads: L04\n\nBy source:\n\n- Paid Search: 2 unique leads, 1 qualified (50% qualification rate), SAR 1200 spend, SAR 600 cost per unique lead\n- Social: 2 unique leads, 0 qualified (0% qualification rate), SAR 800 spend, SAR 400 cost per unique lead\n- Referral & Organic: Both had 1 unique and qualified lead each, with unknown spend\n- Unknown source: 1 unique lead, 0 qualified\n\nUnknowns: Spend for Referral, Organic, and Unknown sources; budgets for 2 leads.",
+          "draft_source_ids": [
+            "P01",
+            "L01"
+          ],
+          "recommendations": [
+            "Review Qualified leads for follow-up through approved channels; this analysis contacts nobody.",
+            "Complete unknown source, budget, and spend data before reallocating spend."
+          ],
+          "recommendation_source_ids": [
+            [
+              "P03",
+              "L01",
+              "L02",
+              "L03",
+              "L04",
+              "L05",
+              "L06",
+              "L07",
+              "L08"
+            ],
+            [
+              "P01",
+              "L01",
+              "L02",
+              "L03",
+              "L04",
+              "L05",
+              "L06",
+              "L07",
+              "L08"
+            ]
+          ]
+        },
+        "sources": [
+          "P01",
+          "P02",
+          "P03",
+          "L01",
+          "L02",
+          "L03",
+          "L04",
+          "L05",
+          "L06",
+          "L07",
+          "L08"
+        ],
+        "missing_information": [
+          "No sale or investment conversion data is available.",
+          "Referral spend is unknown, not zero.",
+          "Organic spend is unknown, not zero.",
+          "Unknown spend is unknown, not zero.",
+          "1 unique lead(s) have an unknown source.",
+          "2 unique lead(s) have unknown budgets."
+        ],
+        "proposed_action": null,
+        "action_status": "complete"
+      }
+    },
+    {
+      "role": "marketing",
+      "request": "Please handle this issue",
+      "total_seconds": 0.6087,
+      "model_calls": [
+        {
+          "task": "CLASSIFY",
+          "seconds": 0.5924
+        }
+      ],
+      "response": {
+        "request_id": "demo-11",
+        "department": "unrouted",
+        "result": "Could you please specify the nature of the issue you're facing?",
+        "sources": [],
+        "missing_information": [
+          "department"
+        ],
+        "proposed_action": null,
+        "action_status": "needs_clarification"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "inspection": {
+        "proposal_id": "4275a5d6-6078-4f61-b956-980d5ef33add",
+        "request_id": "demo-1",
+        "action_type": "desk_ticket",
+        "status": "pending",
+        "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+        "payload": {
+          "classification": "payment confirmation missing",
+          "customer_id": "C01",
+          "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+          "draft_source_ids": [
+            "S01"
+          ],
+          "language": "en",
+          "message_id": "S01",
+          "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+          "priority": "High",
+          "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+          "source_ids": [
+            "S01",
+            "P02"
+          ]
+        },
+        "decision": null
+      },
+      "first": {
+        "proposal_id": "4275a5d6-6078-4f61-b956-980d5ef33add",
+        "execution_key": "4275a5d6-6078-4f61-b956-980d5ef33add",
+        "adapter_result_json": "{\"action_id\":\"TICKET-4275a5d6-6078-4f61-b956-980d5ef33add\",\"verified\":true}",
+        "outcome": "succeeded",
+        "attempts": 2,
+        "updated_at": "2026-10-05T18:50:14.268377+00:00",
+        "action": {
+          "action_id": "TICKET-4275a5d6-6078-4f61-b956-980d5ef33add",
+          "action_type": "desk_ticket",
+          "payload": {
+            "classification": "payment confirmation missing",
+            "customer_id": "C01",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "draft_source_ids": [
+              "S01"
+            ],
+            "language": "en",
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ]
+          },
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba"
+        },
+        "attempt_history": [
+          {
+            "attempt": 1,
+            "outcome": "transient_failure",
+            "created_at": "2026-10-05T18:50:14.268253+00:00"
+          },
+          {
+            "attempt": 2,
+            "outcome": "succeeded",
+            "created_at": "2026-10-05T18:50:14.268385+00:00"
+          }
+        ]
+      },
+      "after_restart": {
+        "proposal_id": "4275a5d6-6078-4f61-b956-980d5ef33add",
+        "execution_key": "4275a5d6-6078-4f61-b956-980d5ef33add",
+        "adapter_result_json": "{\"action_id\":\"TICKET-4275a5d6-6078-4f61-b956-980d5ef33add\",\"verified\":true}",
+        "outcome": "succeeded",
+        "attempts": 2,
+        "updated_at": "2026-10-05T18:50:14.268377+00:00",
+        "action": {
+          "action_id": "TICKET-4275a5d6-6078-4f61-b956-980d5ef33add",
+          "action_type": "desk_ticket",
+          "payload": {
+            "classification": "payment confirmation missing",
+            "customer_id": "C01",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "draft_source_ids": [
+              "S01"
+            ],
+            "language": "en",
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ]
+          },
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba"
+        },
+        "attempt_history": [
+          {
+            "attempt": 1,
+            "outcome": "transient_failure",
+            "created_at": "2026-10-05T18:50:14.268253+00:00"
+          },
+          {
+            "attempt": 2,
+            "outcome": "succeeded",
+            "created_at": "2026-10-05T18:50:14.268385+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "inspection": {
+        "proposal_id": "14fb7694-0d34-4010-8a35-408b3a507e2f",
+        "request_id": "demo-2",
+        "action_type": "desk_ticket",
+        "status": "pending",
+        "payload_hash": "2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42",
+        "payload": {
+          "classification": "access request",
+          "customer_id": "C05",
+          "draft": "شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.",
+          "draft_source_ids": [
+            "S02",
+            "P02"
+          ],
+          "language": "ar",
+          "message_id": "S02",
+          "message_text": "لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟",
+          "priority": "Normal",
+          "priority_rationale": "P02: ordinary account-access requests are Normal priority.",
+          "source_ids": [
+            "S02",
+            "P02"
+          ]
+        },
+        "decision": null
+      },
+      "first": {
+        "proposal_id": "14fb7694-0d34-4010-8a35-408b3a507e2f",
+        "execution_key": "14fb7694-0d34-4010-8a35-408b3a507e2f",
+        "adapter_result_json": null,
+        "outcome": "uncertain",
+        "attempts": 1,
+        "updated_at": "2026-10-05T18:50:14.279764+00:00",
+        "action": null,
+        "attempt_history": [
+          {
+            "attempt": 1,
+            "outcome": "uncertain",
+            "created_at": "2026-10-05T18:50:14.279815+00:00"
+          }
+        ],
+        "reconciliation_required": true
+      },
+      "after_restart": {
+        "proposal_id": "14fb7694-0d34-4010-8a35-408b3a507e2f",
+        "execution_key": "14fb7694-0d34-4010-8a35-408b3a507e2f",
+        "adapter_result_json": "{\"action_id\":\"TICKET-14fb7694-0d34-4010-8a35-408b3a507e2f\",\"verified\":true}",
+        "outcome": "succeeded",
+        "attempts": 2,
+        "updated_at": "2026-10-05T18:50:14.287047+00:00",
+        "action": {
+          "action_id": "TICKET-14fb7694-0d34-4010-8a35-408b3a507e2f",
+          "action_type": "desk_ticket",
+          "payload": {
+            "classification": "access request",
+            "customer_id": "C05",
+            "draft": "شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.",
+            "draft_source_ids": [
+              "S02",
+              "P02"
+            ],
+            "language": "ar",
+            "message_id": "S02",
+            "message_text": "لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟",
+            "priority": "Normal",
+            "priority_rationale": "P02: ordinary account-access requests are Normal priority.",
+            "source_ids": [
+              "S02",
+              "P02"
+            ]
+          },
+          "payload_hash": "2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42"
+        },
+        "attempt_history": [
+          {
+            "attempt": 1,
+            "outcome": "uncertain",
+            "created_at": "2026-10-05T18:50:14.279815+00:00"
+          },
+          {
+            "attempt": 2,
+            "outcome": "succeeded",
+            "created_at": "2026-10-05T18:50:14.287308+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "inspection": {
+        "proposal_id": "d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+        "request_id": "demo-6",
+        "action_type": "incident_task",
+        "status": "pending",
+        "payload_hash": "56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc",
+        "payload": {
+          "draft_note": "Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.",
+          "draft_source_ids": [
+            "I01",
+            "I02",
+            "I03",
+            "I04"
+          ],
+          "hypotheses": [
+            "A timeout on the same request may be related; shared request IDs do not prove causation."
+          ],
+          "next_step": "Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.",
+          "observed_facts": [
+            "I01: lead_intake reported HTTP 500 for R101",
+            "I02: crm_mock reported timeout for R101",
+            "I03: lead_intake reported HTTP 500 for R102",
+            "I04: lead_intake reported HTTP 200 for R103"
+          ],
+          "recovery_assessment": "A later successful request does not prove complete recovery: I04",
+          "severity": "High",
+          "severity_rationale": "P02: repeated lead-intake server errors require High priority.",
+          "source_ids": [
+            "I01",
+            "I02",
+            "I03",
+            "I04",
+            "P02"
+          ],
+          "title": "Investigate evidenced service failures"
+        },
+        "decision": null
+      },
+      "first": {
+        "proposal_id": "d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+        "execution_key": "d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+        "adapter_result_json": "{\"action_id\":\"TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863\",\"verified\":true}",
+        "outcome": "succeeded",
+        "attempts": 1,
+        "updated_at": "2026-10-05T18:50:14.298288+00:00",
+        "action": {
+          "action_id": "TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+          "action_type": "incident_task",
+          "payload": {
+            "draft_note": "Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.",
+            "draft_source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04"
+            ],
+            "hypotheses": [
+              "A timeout on the same request may be related; shared request IDs do not prove causation."
+            ],
+            "next_step": "Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.",
+            "observed_facts": [
+              "I01: lead_intake reported HTTP 500 for R101",
+              "I02: crm_mock reported timeout for R101",
+              "I03: lead_intake reported HTTP 500 for R102",
+              "I04: lead_intake reported HTTP 200 for R103"
+            ],
+            "recovery_assessment": "A later successful request does not prove complete recovery: I04",
+            "severity": "High",
+            "severity_rationale": "P02: repeated lead-intake server errors require High priority.",
+            "source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04",
+              "P02"
+            ],
+            "title": "Investigate evidenced service failures"
+          },
+          "payload_hash": "56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc"
+        },
+        "attempt_history": [
+          {
+            "attempt": 1,
+            "outcome": "succeeded",
+            "created_at": "2026-10-05T18:50:14.298316+00:00"
+          }
+        ]
+      },
+      "after_restart": {
+        "proposal_id": "d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+        "execution_key": "d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+        "adapter_result_json": "{\"action_id\":\"TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863\",\"verified\":true}",
+        "outcome": "succeeded",
+        "attempts": 1,
+        "updated_at": "2026-10-05T18:50:14.298288+00:00",
+        "action": {
+          "action_id": "TASK-d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+          "action_type": "incident_task",
+          "payload": {
+            "draft_note": "Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.",
+            "draft_source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04"
+            ],
+            "hypotheses": [
+              "A timeout on the same request may be related; shared request IDs do not prove causation."
+            ],
+            "next_step": "Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.",
+            "observed_facts": [
+              "I01: lead_intake reported HTTP 500 for R101",
+              "I02: crm_mock reported timeout for R101",
+              "I03: lead_intake reported HTTP 500 for R102",
+              "I04: lead_intake reported HTTP 200 for R103"
+            ],
+            "recovery_assessment": "A later successful request does not prove complete recovery: I04",
+            "severity": "High",
+            "severity_rationale": "P02: repeated lead-intake server errors require High priority.",
+            "source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04",
+              "P02"
+            ],
+            "title": "Investigate evidenced service failures"
+          },
+          "payload_hash": "56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc"
+        },
+        "attempt_history": [
+          {
+            "attempt": 1,
+            "outcome": "succeeded",
+            "created_at": "2026-10-05T18:50:14.298316+00:00"
+          }
+        ]
+      }
+    }
+  ],
+  "acceptance_checks": [
+    {
+      "scenario": "rejected",
+      "passed": true,
+      "error": null,
+      "inspection": {
+        "proposal_id": "ebeb8205-ce59-41a1-a351-5072fb685c14",
+        "request_id": "acceptance-rejected",
+        "action_type": "desk_ticket",
+        "status": "rejected",
+        "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+        "payload": {
+          "classification": "payment confirmation missing",
+          "customer_id": "C01",
+          "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+          "draft_source_ids": [
+            "S01"
+          ],
+          "language": "en",
+          "message_id": "S01",
+          "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+          "priority": "High",
+          "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+          "source_ids": [
+            "S01",
+            "P02"
+          ]
+        },
+        "decision": {
+          "approval_id": "fd8ad7d7-b4c9-48e4-ba82-7f46dbb73e64",
+          "decision": "rejected",
+          "reviewer_role": "ops_reviewer",
+          "reviewer_actor_id": "demo-reviewer",
+          "decided_at": "2026-10-05T18:50:15.380998+00:00"
+        }
+      },
+      "outcome": {
+        "proposal_id": "ebeb8205-ce59-41a1-a351-5072fb685c14",
+        "outcome": "not_executed",
+        "action": null,
+        "attempt_history": []
+      },
+      "stored_action_count": 0,
+      "mode": "real draft, controlled reviewer operation"
+    },
+    {
+      "scenario": "edited_hash",
+      "passed": true,
+      "error": "proposal ID or immutable payload hash does not match",
+      "inspection": {
+        "proposal_id": "02a5d0f1-7334-42ef-b8c6-d056b827bb92",
+        "request_id": "acceptance-edited_hash",
+        "action_type": "desk_ticket",
+        "status": "pending",
+        "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+        "payload": {
+          "classification": "payment confirmation missing",
+          "customer_id": "C01",
+          "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+          "draft_source_ids": [
+            "S01"
+          ],
+          "language": "en",
+          "message_id": "S01",
+          "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+          "priority": "High",
+          "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+          "source_ids": [
+            "S01",
+            "P02"
+          ]
+        },
+        "decision": null
+      },
+      "outcome": {
+        "proposal_id": "02a5d0f1-7334-42ef-b8c6-d056b827bb92",
+        "outcome": "not_executed",
+        "action": null,
+        "attempt_history": []
+      },
+      "stored_action_count": 0,
+      "mode": "real draft, controlled reviewer operation"
+    },
+    {
+      "scenario": "always_fail",
+      "passed": true,
+      "error": null,
+      "inspection": {
+        "proposal_id": "7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1",
+        "request_id": "acceptance-always_fail",
+        "action_type": "desk_ticket",
+        "status": "failed",
+        "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+        "payload": {
+          "classification": "payment confirmation missing",
+          "customer_id": "C01",
+          "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+          "draft_source_ids": [
+            "S01"
+          ],
+          "language": "en",
+          "message_id": "S01",
+          "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+          "priority": "High",
+          "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+          "source_ids": [
+            "S01",
+            "P02"
+          ]
+        },
+        "decision": {
+          "approval_id": "dddded73-6ed0-4481-a47b-cde8d5dba524",
+          "decision": "approved",
+          "reviewer_role": "ops_reviewer",
+          "reviewer_actor_id": "demo-reviewer",
+          "decided_at": "2026-10-05T18:50:17.542566+00:00"
+        }
+      },
+      "outcome": {
+        "proposal_id": "7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1",
+        "execution_key": "7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1",
+        "adapter_result_json": null,
+        "outcome": "adapter_failure",
+        "attempts": 1,
+        "updated_at": "2026-10-05T18:50:17.544533+00:00",
+        "action": null,
+        "attempt_history": [
+          {
+            "attempt": 1,
+            "outcome": "adapter_failure",
+            "created_at": "2026-10-05T18:50:17.544620+00:00"
+          }
+        ]
+      },
+      "stored_action_count": 0,
+      "mode": "simulated local adapter failure"
+    },
+    {
+      "scenario": "repeat_request",
+      "passed": true,
+      "error": null,
+      "inspection": {
+        "proposal_id": "ab148d8d-1c0b-4fab-b6d3-093f03b1de70",
+        "request_id": "acceptance-repeat_request",
+        "action_type": "desk_ticket",
+        "status": "pending",
+        "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+        "payload": {
+          "classification": "payment confirmation missing",
+          "customer_id": "C01",
+          "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+          "draft_source_ids": [
+            "S01"
+          ],
+          "language": "en",
+          "message_id": "S01",
+          "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+          "priority": "High",
+          "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+          "source_ids": [
+            "S01",
+            "P02"
+          ]
+        },
+        "decision": null
+      },
+      "outcome": {
+        "proposal_id": "ab148d8d-1c0b-4fab-b6d3-093f03b1de70",
+        "outcome": "not_executed",
+        "action": null,
+        "attempt_history": []
+      },
+      "stored_action_count": 0,
+      "mode": "real draft, controlled reviewer operation"
+    },
+    {
+      "scenario": "model_unavailable",
+      "passed": true,
+      "mode": "deliberate unavailable local endpoint, not a real model generation",
+      "response": {
+        "request_id": "acceptance-model-unavailable",
+        "department": "unrouted",
+        "result": "Local model is unavailable or timed out.",
+        "sources": [],
+        "missing_information": [
+          "local model"
+        ],
+        "proposed_action": null,
+        "action_status": "model_unavailable"
+      }
+    },
+    {
+      "scenario": "missing_source",
+      "passed": true,
+      "mode": "real interpretation, deliberately empty fixture directory",
+      "response": {
+        "request_id": "acceptance-missing-source",
+        "department": "marketing",
+        "result": "The authorized source leads is unavailable or invalid.",
+        "sources": [],
+        "missing_information": [
+          "authorized local source"
+        ],
+        "proposed_action": null,
+        "action_status": "source_unavailable"
+      }
+    }
+  ],
+  "history": [
+    {
+      "request_id": "demo-0",
+      "actor_id": "demo-marketing",
+      "actor_role": "marketing",
+      "route": "marketing",
+      "status": "complete",
+      "created_at": "2026-10-05T18:49:58.180237+00:00",
+      "source_ids_json": "[\"P01\",\"P02\",\"P03\",\"L01\",\"L02\",\"L03\",\"L04\",\"L05\",\"L06\",\"L07\",\"L08\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-1",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "pending_approval",
+      "created_at": "2026-10-05T18:50:01.415968+00:00",
+      "source_ids_json": "[\"S01\",\"P02\"]",
+      "proposals": [
+        {
+          "proposal_id": "4275a5d6-6078-4f61-b956-980d5ef33add",
+          "request_id": "demo-1",
+          "action_type": "desk_ticket",
+          "status": "succeeded",
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+          "payload": {
+            "classification": "payment confirmation missing",
+            "customer_id": "C01",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "draft_source_ids": [
+              "S01"
+            ],
+            "language": "en",
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ]
+          },
+          "decision": {
+            "approval_id": "8eab3e35-371e-4788-a35e-cb10c35da139",
+            "decision": "approved",
+            "reviewer_role": "ops_reviewer",
+            "reviewer_actor_id": "demo-reviewer",
+            "decided_at": "2026-10-05T18:50:14.263959+00:00"
+          }
+        }
+      ]
+    },
+    {
+      "request_id": "demo-2",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "pending_approval",
+      "created_at": "2026-10-05T18:50:02.575529+00:00",
+      "source_ids_json": "[\"S02\",\"P02\"]",
+      "proposals": [
+        {
+          "proposal_id": "14fb7694-0d34-4010-8a35-408b3a507e2f",
+          "request_id": "demo-2",
+          "action_type": "desk_ticket",
+          "status": "succeeded",
+          "payload_hash": "2e92689c5ad854d5c584090f510384807af9ba3913bfc8b8b07d3b7e6230fe42",
+          "payload": {
+            "classification": "access request",
+            "customer_id": "C05",
+            "draft": "شكرًا على تواصلك معنا. لقد تلقينا طلبك بشأن مشكلتك في تسجيل الدخول إلى حسابك.",
+            "draft_source_ids": [
+              "S02",
+              "P02"
+            ],
+            "language": "ar",
+            "message_id": "S02",
+            "message_text": "لا أستطيع تسجيل الدخول إلى حسابي، هل يمكنكم مساعدتي؟",
+            "priority": "Normal",
+            "priority_rationale": "P02: ordinary account-access requests are Normal priority.",
+            "source_ids": [
+              "S02",
+              "P02"
+            ]
+          },
+          "decision": {
+            "approval_id": "ea2f58b2-39e3-4cf8-827a-9a48bde7f3a6",
+            "decision": "approved",
+            "reviewer_role": "ops_reviewer",
+            "reviewer_actor_id": "demo-reviewer",
+            "decided_at": "2026-10-05T18:50:14.274671+00:00"
+          }
+        }
+      ]
+    },
+    {
+      "request_id": "demo-3",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "needs_information",
+      "created_at": "2026-10-05T18:50:03.728650+00:00",
+      "source_ids_json": "[\"S03\",\"P02\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-4",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "blocked",
+      "created_at": "2026-10-05T18:50:04.141921+00:00",
+      "source_ids_json": "[\"S04\",\"P03\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-5",
+      "actor_id": "demo-product",
+      "actor_role": "product",
+      "route": "product",
+      "status": "draft",
+      "created_at": "2026-10-05T18:50:04.538848+00:00",
+      "source_ids_json": "[\"P01\",\"P02\",\"P03\",\"F01\",\"F02\",\"F03\",\"F04\",\"F05\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-6",
+      "actor_id": "demo-tech",
+      "actor_role": "tech",
+      "route": "tech",
+      "status": "pending_approval",
+      "created_at": "2026-10-05T18:50:07.531949+00:00",
+      "source_ids_json": "[\"I01\",\"I02\",\"I03\",\"I04\",\"P02\"]",
+      "proposals": [
+        {
+          "proposal_id": "d32eceb6-0f74-4db2-90fa-fbb6cb276863",
+          "request_id": "demo-6",
+          "action_type": "incident_task",
+          "status": "succeeded",
+          "payload_hash": "56f8cdb507a54b286191b4b61c09d219efb92890c6587353d5ccdbaa6750b8fc",
+          "payload": {
+            "draft_note": "Based on the provided facts, there are indications of both HTTP server errors and dependency timeouts. The lead_intake service reported HTTP 500 errors for requests R101 (I01) and R102 (I03), suggesting potential server issues. Meanwhile, crm_mock reported a timeout for request R101 (I02), implying a possible dependency issue. However, the hypothesis that these are related is uncertain due to lack of causation proof. The successful HTTP 200 response for request R103 (I04) does not guarantee full recovery as per the recovery assessment. Further investigation is needed to correlate traces and reproduce failing requests.",
+            "draft_source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04"
+            ],
+            "hypotheses": [
+              "A timeout on the same request may be related; shared request IDs do not prove causation."
+            ],
+            "next_step": "Correlate traces for R101, R102 with dependency logs; reproduce a failing request and compare a successful request.",
+            "observed_facts": [
+              "I01: lead_intake reported HTTP 500 for R101",
+              "I02: crm_mock reported timeout for R101",
+              "I03: lead_intake reported HTTP 500 for R102",
+              "I04: lead_intake reported HTTP 200 for R103"
+            ],
+            "recovery_assessment": "A later successful request does not prove complete recovery: I04",
+            "severity": "High",
+            "severity_rationale": "P02: repeated lead-intake server errors require High priority.",
+            "source_ids": [
+              "I01",
+              "I02",
+              "I03",
+              "I04",
+              "P02"
+            ],
+            "title": "Investigate evidenced service failures"
+          },
+          "decision": {
+            "approval_id": "e50983e6-10a9-4135-ac08-26127d3a67c7",
+            "decision": "approved",
+            "reviewer_role": "ops_reviewer",
+            "reviewer_actor_id": "demo-reviewer",
+            "decided_at": "2026-10-05T18:50:14.292746+00:00"
+          }
+        }
+      ]
+    },
+    {
+      "request_id": "demo-7",
+      "actor_id": "demo-marketing",
+      "actor_role": "marketing",
+      "route": "restricted",
+      "status": "denied",
+      "created_at": "2026-10-05T18:50:10.392584+00:00",
+      "source_ids_json": "[\"P03\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-8",
+      "actor_id": "demo-marketing",
+      "actor_role": "marketing",
+      "route": "unrouted",
+      "status": "blocked",
+      "created_at": "2026-10-05T18:50:10.403633+00:00",
+      "source_ids_json": "[\"P01\",\"P03\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-9",
+      "actor_id": "demo-tech",
+      "actor_role": "tech",
+      "route": "restricted",
+      "status": "denied",
+      "created_at": "2026-10-05T18:50:10.413229+00:00",
+      "source_ids_json": "[\"P03\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-10",
+      "actor_id": "demo-marketing",
+      "actor_role": "marketing",
+      "route": "marketing",
+      "status": "complete",
+      "created_at": "2026-10-05T18:50:10.420596+00:00",
+      "source_ids_json": "[\"P01\",\"P02\",\"P03\",\"L01\",\"L02\",\"L03\",\"L04\",\"L05\",\"L06\",\"L07\",\"L08\"]",
+      "proposals": []
+    },
+    {
+      "request_id": "demo-11",
+      "actor_id": "demo-marketing",
+      "actor_role": "marketing",
+      "route": "unrouted",
+      "status": "needs_clarification",
+      "created_at": "2026-10-05T18:50:13.654206+00:00",
+      "source_ids_json": "[]",
+      "proposals": []
+    },
+    {
+      "request_id": "acceptance-rejected",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "pending_approval",
+      "created_at": "2026-10-05T18:50:14.302686+00:00",
+      "source_ids_json": "[\"S01\",\"P02\"]",
+      "proposals": [
+        {
+          "proposal_id": "ebeb8205-ce59-41a1-a351-5072fb685c14",
+          "request_id": "acceptance-rejected",
+          "action_type": "desk_ticket",
+          "status": "rejected",
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+          "payload": {
+            "classification": "payment confirmation missing",
+            "customer_id": "C01",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "draft_source_ids": [
+              "S01"
+            ],
+            "language": "en",
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ]
+          },
+          "decision": {
+            "approval_id": "fd8ad7d7-b4c9-48e4-ba82-7f46dbb73e64",
+            "decision": "rejected",
+            "reviewer_role": "ops_reviewer",
+            "reviewer_actor_id": "demo-reviewer",
+            "decided_at": "2026-10-05T18:50:15.380998+00:00"
+          }
+        }
+      ]
+    },
+    {
+      "request_id": "acceptance-edited_hash",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "pending_approval",
+      "created_at": "2026-10-05T18:50:15.382983+00:00",
+      "source_ids_json": "[\"S01\",\"P02\"]",
+      "proposals": [
+        {
+          "proposal_id": "02a5d0f1-7334-42ef-b8c6-d056b827bb92",
+          "request_id": "acceptance-edited_hash",
+          "action_type": "desk_ticket",
+          "status": "pending",
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+          "payload": {
+            "classification": "payment confirmation missing",
+            "customer_id": "C01",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "draft_source_ids": [
+              "S01"
+            ],
+            "language": "en",
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ]
+          },
+          "decision": null
+        }
+      ]
+    },
+    {
+      "request_id": "acceptance-always_fail",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "pending_approval",
+      "created_at": "2026-10-05T18:50:16.472552+00:00",
+      "source_ids_json": "[\"S01\",\"P02\"]",
+      "proposals": [
+        {
+          "proposal_id": "7b5a0bf9-b7ec-4a7a-952c-28d937a2f2b1",
+          "request_id": "acceptance-always_fail",
+          "action_type": "desk_ticket",
+          "status": "failed",
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+          "payload": {
+            "classification": "payment confirmation missing",
+            "customer_id": "C01",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "draft_source_ids": [
+              "S01"
+            ],
+            "language": "en",
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ]
+          },
+          "decision": {
+            "approval_id": "dddded73-6ed0-4481-a47b-cde8d5dba524",
+            "decision": "approved",
+            "reviewer_role": "ops_reviewer",
+            "reviewer_actor_id": "demo-reviewer",
+            "decided_at": "2026-10-05T18:50:17.542566+00:00"
+          }
+        }
+      ]
+    },
+    {
+      "request_id": "acceptance-repeat_request",
+      "actor_id": "demo-customer_service",
+      "actor_role": "customer_service",
+      "route": "customer_service",
+      "status": "pending_approval",
+      "created_at": "2026-10-05T18:50:17.546481+00:00",
+      "source_ids_json": "[\"S01\",\"P02\"]",
+      "proposals": [
+        {
+          "proposal_id": "ab148d8d-1c0b-4fab-b6d3-093f03b1de70",
+          "request_id": "acceptance-repeat_request",
+          "action_type": "desk_ticket",
+          "status": "pending",
+          "payload_hash": "88769d78aa9c5550ae2a8e0eaa79ab81ef6fdaf56299d2bbc3d81f7047f029ba",
+          "payload": {
+            "classification": "payment confirmation missing",
+            "customer_id": "C01",
+            "draft": "Thank you for your report. We acknowledge that you have made a successful payment but are currently unable to see the confirmation in your account.",
+            "draft_source_ids": [
+              "S01"
+            ],
+            "language": "en",
+            "message_id": "S01",
+            "message_text": "My payment was successful, but I cannot see the confirmation in my account.",
+            "priority": "High",
+            "priority_rationale": "P02: reported successful payment with missing confirmation requires human investigation.",
+            "source_ids": [
+              "S01",
+              "P02"
+            ]
+          },
+          "decision": null
+        }
+      ]
+    },
+    {
+      "request_id": "acceptance-model-unavailable",
+      "actor_id": "customer_service-test",
+      "actor_role": "customer_service",
+      "route": "unrouted",
+      "status": "model_unavailable",
+      "created_at": "2026-10-05T18:50:18.623766+00:00",
+      "source_ids_json": "[]",
+      "proposals": []
+    },
+    {
+      "request_id": "acceptance-missing-source",
+      "actor_id": "marketing-test",
+      "actor_role": "marketing",
+      "route": "marketing",
+      "status": "source_unavailable",
+      "created_at": "2026-10-05T18:50:18.633158+00:00",
+      "source_ids_json": "[]",
+      "proposals": []
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HissaTech assessment workspace</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workspace</a>
+  <aside class="sidebar">
+    <a class="brand" href="/">HissaTech<span>Assessment workspace</span></a>
+    <nav aria-label="Department workspaces" id="departments">
+      <button type="button" data-role="marketing" aria-current="page">Marketing</button>
+      <button type="button" data-role="customer_service">Customer Service</button>
+      <button type="button" data-role="product">Product</button>
+      <button type="button" data-role="tech">Tech</button>
+      <button type="button" data-role="ops_reviewer" class="review-nav">Ops Review</button>
+    </nav>
+    <div class="history-heading"><h2>Recent requests</h2><button type="button" id="refresh" class="quiet">Refresh</button></div>
+    <div id="history" class="history"><p class="muted">Connecting to local history...</p></div>
+    <p class="sidebar-note">Fictional assessment data.<br>Mock actions only.</p>
+  </aside>
+  <main id="workspace" tabindex="-1">
+    <header class="workspace-header">
+      <div><h1 id="page-title">Marketing workspace</h1><p id="page-description">Lead performance, with unknowns kept visible.</p></div>
+      <div class="identity"><label for="identity">Test identity</label><select id="identity">
+        <option value="marketing">Marketing</option><option value="customer_service">Customer Service</option>
+        <option value="product">Product</option><option value="tech">Tech</option><option value="ops_reviewer">Ops Reviewer</option>
+      </select></div>
+    </header>
+    <div class="runtime"><span id="runtime">Connecting to local runtime...</span><span>Test identities, not authentication</span></div>
+    <p id="notice" class="notice" role="alert" hidden></p>
+    <section id="request-panel" class="panel" aria-labelledby="request-heading">
+      <h2 id="request-heading">Run a department request</h2>
+      <form id="request-form">
+        <label for="prompt">Request</label>
+        <textarea id="prompt" rows="3" maxlength="16000" required dir="auto">summarize Prime lead performance</textarea>
+        <div id="examples" class="examples" aria-label="Example requests"></div>
+        <div class="form-footer"><p>Creates a draft or proposal. Never sends a customer message.</p><button type="submit" id="run" class="primary" disabled>Run request</button></div>
+      </form>
+      <div id="loading" hidden role="status"><p>Generating locally. Keep this page open.</p><div class="skeleton"></div><div class="skeleton short"></div></div>
+      <div id="retry" hidden><p>The response was interrupted. Retry uses the same request ID to avoid duplicates.</p><button type="button" id="retry-button">Retry same request</button></div>
+    </section>
+    <section id="result-panel" class="panel" aria-labelledby="result-heading">
+      <div class="section-heading"><h2 id="result-heading">Result</h2><span id="result-status" class="badge">Not run</span></div>
+      <div id="result"><div class="empty"><h3>Start with a real question.</h3><p>Run an example above to see calculated facts, cited sources, and missing information. Ticket and incident proposals wait for a separate Ops decision.</p></div></div>
+    </section>
+    <section id="review-panel" class="panel" hidden aria-labelledby="review-heading">
+      <div class="section-heading"><h2 id="review-heading">Mock action review</h2><span>Ops test identity</span></div>
+      <p class="muted">Inspect exact persisted content before approving. Approval creates only a local mock ticket or task.</p>
+      <div id="queue" class="queue"></div>
+      <div id="inspection"></div>
+    </section>
+    <footer class="workspace-footer">Fictional assessment data. Mock actions only. Local inference with approval before action.</footer>
+  </main>
+</body>
+</html>

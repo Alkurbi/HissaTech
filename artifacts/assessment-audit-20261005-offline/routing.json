@@ -1,0 +1,29 @@
+[
+  {
+    "request": "how many leads",
+    "expected_department": "marketing",
+    "interpretation": {
+      "department": "marketing",
+      "clarification": null
+    },
+    "passed": true
+  },
+  {
+    "request": "how many duplicates leads",
+    "expected_department": "marketing",
+    "interpretation": {
+      "department": "marketing",
+      "clarification": null
+    },
+    "passed": true
+  },
+  {
+    "request": "Can you deal with this problem?",
+    "expected_department": null,
+    "interpretation": {
+      "department": null,
+      "clarification": "Could you please specify the nature of the problem?"
+    },
+    "passed": true
+  }
+]

@@ -1,0 +1,6 @@
+[
+  {"id":"I01","timestamp":"2026-09-28T10:00:00+03:00","service":"lead_intake","event":"HTTP 500","request_id":"R101"},
+  {"id":"I02","timestamp":"2026-09-28T10:00:05+03:00","service":"crm_mock","event":"timeout","request_id":"R101"},
+  {"id":"I03","timestamp":"2026-09-28T10:01:00+03:00","service":"lead_intake","event":"HTTP 500","request_id":"R102"},
+  {"id":"I04","timestamp":"2026-09-28T10:03:00+03:00","service":"lead_intake","event":"HTTP 200","request_id":"R103"}
+]
